@@ -127,7 +127,7 @@
   background-size: 3px 3px;
 }
 
-.bg-light-radial {
+/* .bg-light-radial {
   background-image: -webkit-repeating-radial-gradient(
     center center,
     rgba(256, 256, 256, 0.2),
@@ -164,7 +164,7 @@
     transparent 100%
   );
   background-size: 3px 3px;
-}
+} */
 
 .navbar-dark .navbar-nav .nav-link {
   position: relative;
@@ -273,7 +273,7 @@
 /* Portfolio section */
 .portfolio-heading {
   opacity: 0;
-  transform: translatey(-150px)
+  transform: translateY(-150px)
 }
 
 .portfolio-summary {
@@ -298,6 +298,15 @@
 /* client section */
 .bajej-img {
   height: 25rem
+}
+
+/* footer section */
+.footer, .f-links a {
+  color: var(--light) !important;
+}
+
+.footer h4 {
+  color: var(--primary) !important;
 }
 
 @media (max-width: 991.98px) {
@@ -334,7 +343,7 @@
   }
 
     .img__slider {
-    height: 60vh;
+    height: 65vh;
   }
 
   .carousel-caption h1 {
@@ -344,6 +353,11 @@
 
   .display-5 {
     font-size: 1.5rem
+  }
+
+  /* project */
+  .p-title {
+    font-size: 0.9rem !important;
   }
 }
 
@@ -357,6 +371,12 @@
   .request-form {
     display: none
   }
+
+  /* project */
+  .p-title {
+    font-size: 0.9rem !important;
+  }
+
 }
 
 .page-header {

@@ -29,16 +29,16 @@ block content
         span.visually-hidden Next
   // Carousel End
   // About Start
-  .about-section.container-fluid.py-6.px-2.px-lg-5
-    .row.g-5.px-5
+  .about-section.container-fluid.py-6.px-2.px-md-5
+    .row.g-5.px-3
       .col-lg-6
         h1.display-5.text-uppercase.mb-4 We are 
           span.text-primary the Best 
           | at what we do
-        h4.text-uppercase.mb-3.text-body.fs-5.text.dark our vision is to be a leading oil and gas services provider with excellent reference in the energy sector
-        p Our mission is to engineer, procure, construct, install and commission quality and cost efficient oil and gas infrastructure in a safe environment
+        h4.mb-3.fs-5.text.dark(style="color: #040f28b8") Our vision is to be a leading oil and gas services provider with excellent reference in the energy sector.
+        p Our mission is to engineer, procure, construct, install and commission quality and cost efficient oil and gas infrastructure in a safe environment.
         .d-none.d-sm-block
-          h5 To achieve these, we need;
+          h5(style="color: #040f28b8") To achieve these, we need;
           .row.gx-5.py-2
             .col-sm-6.mb-2
               p.fw-bold.mb-2
@@ -146,17 +146,17 @@ block content
               i.bi.bi-arrow-right
   // Services End
   // Appointment Start
-  .container-fluid.py-6.px-5
+  .container-fluid.py-6.px-3.px-md-5
     .row.gx-5
       .col-lg-4.mb-5.mb-lg-0
         .mb-4
           h1.display-5.text-uppercase.mb-4 Request A 
             span.text-primary Call Back
         p.mb-5
-          b Looking to discuss a project or explore our services? 
+          b.text-dark Looking to discuss a project or explore our services? 
             br 
           |Leave your details and a member of our team will reach out to you shortly with tailored solutions, our experts are ready to assist. We’re committed to providing reliable, industry-specific guidance to help you move forward with confidence.
-        a.btn.btn-primary.py-3.px-5(href="/contact").animate-from-down Get in touch
+        a.btn.btn-primary.py-3.px-4(href="/contact").animate-from-down Get in touch
       .col-lg-8.request-form
         .bg-light.text-center.p-5
           form
@@ -177,7 +177,7 @@ block content
                 button.btn.btn-primary.w-100.py-3(type="submit") Submit Request
   // Appointment End
   // Portfolio Start
-  .container-fluid.bg-light.py-6.px-5
+  .container-fluid.bg-light.py-6.px-3.px-md-5
     .text-center.mx-auto.mb-5(style="max-width: 600px;")
       h1.display-5.text-uppercase.mb-4.portfolio-heading Some Of Our 
         span.text-primary Popular 
@@ -203,7 +203,7 @@ block content
         .position-relative.portfolio-box
           img.img-fluid.w-100(src="/img/IMG-20250513-WA0011.jpg", alt="14\" sectional replacement")
           a.portfolio-title.shadow-sm(href="#")
-            p.h4.text-uppercase 14&quot; sectional replacement
+            p.h4.text-uppercase.p-title 14&quot; sectional replacement
             span.text-body
               i.fa.fa-map-marker-alt.text-primary.me-2
               | Ikarama, Bayelsa, Nigeria
@@ -213,7 +213,7 @@ block content
         .position-relative.portfolio-box
           img.img-fluid.w-100(src="/img/IMG-20250716-WA0033.jpg", alt="28\" leak repair using clamp")
           a.portfolio-title.shadow-sm(href="#")
-            p.h4.text-uppercase 28&quot; leak repair using clamp
+            p.h4.text-uppercase.p-title 28&quot; leak repair using clamp
             span.text-body
               i.fa.fa-map-marker-alt.text-primary.me-2
               | Egbema, Imo, Nigeria
@@ -223,7 +223,7 @@ block content
         .position-relative.portfolio-box
           img.img-fluid.w-100(src="/img/IMG-20250327-WA0015.jpg", alt="28\" split-tee installation")
           a.portfolio-title.shadow-sm(href="#")
-            p.h4.text-uppercase 28&quot; split-tee installation
+            p.h4.text-uppercase.p-title 28&quot; split-tee installation
             span.text-body
               i.fa.fa-map-marker-alt.text-primary.me-2
               | Elelenwo, Rivers, Nigeria
@@ -233,7 +233,7 @@ block content
         .position-relative.portfolio-box
           img.img-fluid.w-100(src="/img/1000000445.jpg", alt="24\" valve change out and installation")
           a.portfolio-title.shadow-sm(href="#")
-            p.h4.text-uppercase 24&quot; valve change out and installation
+            p.h4.text-uppercase.p-title 24&quot; valve change out and installation
             span.text-body
               i.fa.fa-map-marker-alt.text-primary.me-2
               | Eleme, Rivers, Nigeria
@@ -243,7 +243,7 @@ block content
         .position-relative.portfolio-box
           img.img-fluid.w-100(src="/img/IMG-20240823-WA0011.jpg", alt="28\" sleeve installation")
           a.portfolio-title.shadow-sm(href="#")
-            p.h4.text-uppercase 28&quot; sleeve installation
+            p.h4.text-uppercase.p-title 28&quot; sleeve installation
             span.text-body
               i.fa.fa-map-marker-alt.text-primary.me-2
               | Bodo, Rivers, Nigeria
@@ -253,7 +253,7 @@ block content
         .position-relative.portfolio-box
           img.img-fluid.w-100(src="/img/IMG-20240530-WA0058.jpg", alt="4\" sectional replacement")
           a.portfolio-title.shadow-sm(href="#")
-            p.h4.text-uppercase 4&quot; sectional replacement
+            p.h4.text-uppercase.p-title 4&quot; sectional replacement
             span.text-body
               i.fa.fa-map-marker-alt.text-primary.me-2
               | Ibaa, Rivers, Nigeria
@@ -265,7 +265,7 @@ block content
         |+
       p.fs-5.text-dark.animate-from-left
         b Total Projects Completed
-      a.btn.btn-primary.py-3.px-5.animate-from-down(href="/portfolio") View All Projects
+      a.btn.btn-primary.py-3.px-4.animate-from-down(href="/portfolio") View All Projects
   // Portfolio End
   // Team Start
   .container-fluid.py-6.px-5
@@ -356,7 +356,7 @@ block content
               span Fitter/Foreman
   // Team End
   // Testimonial Start
-  .container-fluid.bg-light.py-6.px-5
+  .container-fluid.bg-light.py-6.px-3.px-md-5
     .text-center.mx-auto.mb-5(style="max-width: 600px;")
       h1.display-5.text-uppercase.mb-4 What Our 
         span.text-primary Happy Cleints 
@@ -401,7 +401,7 @@ block content
   // Testimonial End
   // Blog Start
   //
-    <div class="container-fluid py-6 px-5">
+    <div class="container-fluid py-5 px-5">
     <div class="text-center mx-auto mb-5" style="max-width: 600px;">
     <h1 class="display-5 text-uppercase mb-4">Latest <span class="text-primary">Articles</span> From Our Blog Post</h1>
     </div>
