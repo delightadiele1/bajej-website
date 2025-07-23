@@ -1,4 +1,12 @@
 // Topbar Start
+.container-fluid.px-5.d-lg-none
+  .row
+    .col-12.py-2.text-end.text-dark
+      .d-inline-flex.align-items-center
+        i(class="bi bi-envelope-open fs-4 txt__color me-3 top-text")
+    
+        b.fw-bold.top-text bajejoil@gmail.com
+
 .container-fluid.px-5.d-none.d-lg-block
   .row.gx-5
     .col-lg-4.text-center.py-2
@@ -26,9 +34,10 @@
     a.navbar-brand(href="/")
       h1.m-0.display-4.text-uppercase.text-white
         i.bi.bi-building.text-primary.me-2
-        | Bajej
+        | 
+        span.d-none.d-md-inline-block Bajej
     button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarCollapse")
-      span.navbar-toggler-icon
+      span.navbar-toggler-icon.fs-6
     #navbarCollapse.collapse.navbar-collapse
       .navbar-nav.ms-auto.py-0
         a.nav-item.nav-link.active(href="/") Home

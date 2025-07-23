@@ -295,6 +295,10 @@
   transform: translateY(80px);
 }
 
+/* client section */
+.bajej-img {
+  height: 25rem
+}
 
 @media (max-width: 991.98px) {
   .navbar-dark .navbar-nav .nav-link {
@@ -308,7 +312,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(4, 15, 40, 0.7);
+  background: rgba(23, 23, 27, 0.7);
   z-index: 1;
 }
 
@@ -321,17 +325,25 @@
     font-size: 18px;
     font-weight: 500 !important;
   }
-
-  .carousel-caption h1 {
-    font-size: 25px;
-    font-weight: 600 !important;
-  }
 }
 
 @media (max-width: 768px) {
   .client-img {
     width: 40% !important;
-    height: 150px !important;
+  
+  }
+
+    .img__slider {
+    height: 60vh;
+  }
+
+  .carousel-caption h1 {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+  }
+
+  .display-5 {
+    font-size: 1.5rem
   }
 }
 
@@ -340,6 +352,10 @@
     width: 60% !important;
     height: 150px !important;
     align-self: center;
+  }
+
+  .request-form {
+    display: none
   }
 }
 
