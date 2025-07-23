@@ -1,0 +1,48 @@
+// Topbar Start
+.container-fluid.px-5.d-none.d-lg-block
+  .row.gx-5
+    .col-lg-4.text-center.py-2
+      .d-inline-flex.align-items-center
+        i(class="bi bi-geo-alt fs-1 txt__color me-3 top-text")
+        .text-start
+          h6.text-uppercase.fw-bold.top-text Our Office
+          span.top-text Rumukwurushi, PH, Nigeria
+    .col-lg-4.text-center.border-start.border-end.py-2
+      .d-inline-flex.align-items-center
+        i(class="bi bi-envelope-open fs-1 txt__color me-3 top-text")
+        .text-start
+          h6.text-uppercase.fw-bold.top-text Email Us
+          span.top-text bajejoil@gmail.com
+    .col-lg-4.text-center.py-2
+      .d-inline-flex.align-items-center
+        i(class="bi bi-phone-vibrate fs-1 txt__color me-3 top-text")
+        .text-start
+          h6.text-uppercase.fw-bold.top-text Call Us
+          span.top-text +234 8033 099639
+// Topbar End
+// Navbar Start
+.container-fluid.sticky-top.bg-dark.bg-light-radial.shadow-sm.px-5.pe-lg-0
+  nav.navbar.navbar-expand-lg.bg-dark.bg-light-radial.navbar-dark.py-3.py-lg-0
+    a.navbar-brand(href="/")
+      h1.m-0.display-4.text-uppercase.text-white
+        i.bi.bi-building.text-primary.me-2
+        | Bajej
+    button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarCollapse")
+      span.navbar-toggler-icon
+    #navbarCollapse.collapse.navbar-collapse
+      .navbar-nav.ms-auto.py-0
+        a.nav-item.nav-link.active(href="/") Home
+        a.nav-item.nav-link(href="/about") About
+        a.nav-item.nav-link(href="/service") Service
+        .nav-item.dropdown
+          a.nav-link.dropdown-toggle(href="", data-bs-toggle="dropdown") Pages
+          .dropdown-menu.m-0
+            a.dropdown-item(href="/project") Our Project
+            a.dropdown-item(href="/team") The Team
+            a.dropdown-item(href="/testimonial") Testimonial
+            a.dropdown-item(href="/detail") Blog Detail
+        a.nav-item.nav-link(href="/contact") Contact
+        a.nav-item.nav-link.bg-primary.text-white.px-5.ms-3.d-none.d-lg-block(href="/contact") Get In Touch 
+
+          i.bi.bi-arrow-right
+// Navbar End

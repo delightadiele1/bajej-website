@@ -1,0 +1,470 @@
+/********** Template CSS **********/
+:root {
+  --primary: #f4d73c;
+  --secondary: #fd5d14;
+  --light: #f4f6f8;
+  --dark: rgb(4, 37, 4);
+}
+
+.txt__color {
+  color: var(--primary);
+}
+
+.pt-6 {
+  padding-top: 90px;
+}
+
+.pb-6 {
+  padding-bottom: 90px;
+}
+
+.py-6 {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.btn {
+  position: relative;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.btn::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 5px;
+  bottom: -1px;
+  left: 50%;
+  background: var(--primary);
+  transition: 0.5s;
+}
+
+.btn.btn-primary::after {
+  background: var(--dark);
+}
+
+.btn:hover::after,
+.btn.active::after {
+  width: 50%;
+  left: 25%;
+}
+
+.btn-primary {
+  color: #ffffff;
+}
+
+.btn-square {
+  width: 36px;
+  height: 36px;
+}
+
+.btn-sm-square {
+  width: 28px;
+  height: 28px;
+}
+
+.btn-lg-square {
+  width: 46px;
+  height: 46px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  left: 50%;
+  bottom: 0;
+  margin-left: -22px;
+  border-radius: 0;
+  z-index: 99;
+}
+
+.bg-dark-radial {
+  background-image: -webkit-repeating-radial-gradient(
+    center center,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-image: -moz-repeating-radial-gradient(
+    center center,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-image: -ms-repeating-radial-gradient(
+    center center,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-image: -o-repeating-radial-gradient(
+    center center,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-image: repeating-radial-gradient(
+    center center,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-size: 3px 3px;
+}
+
+.bg-light-radial {
+  background-image: -webkit-repeating-radial-gradient(
+    center center,
+    rgba(256, 256, 256, 0.2),
+    rgba(256, 256, 256, 0.2) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-image: -moz-repeating-radial-gradient(
+    center center,
+    rgba(256, 256, 256, 0.2),
+    rgba(256, 256, 256, 0.2) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-image: -ms-repeating-radial-gradient(
+    center center,
+    rgba(256, 256, 256, 0.2),
+    rgba(256, 256, 256, 0.2) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-image: -o-repeating-radial-gradient(
+    center center,
+    rgba(256, 256, 256, 0.2),
+    rgba(256, 256, 256, 0.2) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-image: repeating-radial-gradient(
+    center center,
+    rgba(256, 256, 256, 0.2),
+    rgba(256, 256, 256, 0.2) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-size: 3px 3px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  position: relative;
+  padding: 25px 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--light);
+  outline: none;
+  transition: 0.5s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--primary);
+}
+
+.navbar-brand {
+  opacity: 0;
+  transform: translateX(-150px);
+}
+
+.navbar-nav {
+  opacity: 0;
+  transform: translateX(200px);
+}
+
+.top-text {
+  font-size: 14px;
+}
+
+.navbar-brand h1 {
+  font-size: 2rem;
+}
+
+.nav-link {
+  font-size: 14px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.img__slider {
+  height: 90vh;
+}
+
+.slide-text {
+  opacity: 0;
+  transform: translateY(150px);
+}
+
+.slide-btn {
+  opacity: 0;
+  
+}
+
+.display-5,
+.h4,
+.sub-title {
+  color: #173a22;
+}
+
+.sub-title, .h4 {
+    font-size: 1.2rem
+}
+
+.display-5 {
+  font-size: 2rem;
+}
+
+.about-section {
+  opacity: 0;
+  transform: translateY(200px);
+}
+
+.service-section {
+  background-image: url('/img/IMG-20250716-WA0007.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 1;
+  position: relative;
+}
+
+.service-section::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
+.service-item {
+  border:5px solid #f4d73c;
+  opacity: 0;
+  transform: translateY(150px);
+}
+
+.service-img {
+  /* height: 30%; */
+  width: 100%;
+}
+
+/* Portfolio section */
+.portfolio-heading {
+  opacity: 0;
+  transform: translatey(-150px)
+}
+
+.portfolio-summary {
+  opacity: 0;
+  transform: translateX(-300px);
+}
+
+.project-count h1{
+  color: #173a22;
+}
+
+.animate-from-left {
+  opacity: 0;
+  transform: translateX(-400px);
+}
+
+.animate-from-down {
+  opacity: 0;
+  transform: translateY(80px);
+}
+
+
+@media (max-width: 991.98px) {
+  .navbar-dark .navbar-nav .nav-link {
+    margin-left: 0;
+    padding: 10px 0;
+  }
+}
+
+.carousel-caption {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(4, 15, 40, 0.7);
+  z-index: 1;
+}
+
+.carousel-caption h1 {
+  font-size: 2rem;
+}
+
+@media (max-width: 576px) {
+  .carousel-caption h4 {
+    font-size: 18px;
+    font-weight: 500 !important;
+  }
+
+  .carousel-caption h1 {
+    font-size: 25px;
+    font-weight: 600 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .client-img {
+    width: 40% !important;
+    height: 150px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .client-img {
+    width: 60% !important;
+    height: 150px !important;
+    align-self: center;
+  }
+}
+
+.page-header {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(4, 15, 40, 0.7), rgba(4, 15, 40, 0.7)),
+    url(../img/carousel-1.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.service-item .service-icon {
+  margin-top: -50px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+}
+
+.service-item .service-icon i {
+  transition: 0.2s;
+}
+
+.service-item:hover .service-icon i {
+  font-size: 60px;
+}
+
+.portfolio-item {
+  margin-bottom: 60px;
+}
+
+.portfolio-title {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 120px;
+  padding: 0 30px;
+  right: 30px;
+  left: 30px;
+  bottom: -60px;
+  background: #ffffff;
+  z-index: 3;
+}
+
+.portfolio-btn {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  margin-top: -60px;
+  margin-left: -60px;
+  font-size: 120px;
+  line-height: 0;
+  transition: 0.1s;
+  transition-delay: 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+
+.portfolio-item:hover .portfolio-btn {
+  opacity: 1;
+}
+
+.portfolio-box::before,
+.portfolio-box::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  transition: 0.5s;
+  z-index: 1;
+  background: rgba(4, 15, 40, 0.7);
+}
+
+.portfolio-box::before {
+  left: 0;
+}
+
+.portfolio-box::after {
+  right: 0;
+}
+
+.portfolio-item:hover .portfolio-box::before {
+  left: 0;
+  width: 50%;
+}
+
+.portfolio-item:hover .portfolio-box::after {
+  right: 0;
+  width: 50%;
+}
+
+@media (min-width: 992px) {
+  .testimonial,
+  .contact-form {
+    margin-left: -90px;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: var(--primary);
+  }
+}
+
+.footer-shape::before {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 100%;
+  top: 0;
+  left: -40px;
+  background: var(--primary);
+  transform: skew(40deg);
+}

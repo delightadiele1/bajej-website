@@ -1,0 +1,471 @@
+extends base
+
+block content
+  // Carousel Start
+  .container-fluid.p-0
+    #header-carousel.carousel.slide.carousel-fade(data-bs-ride="carousel" data-bs-interval="7000")
+      .carousel-inner
+        .carousel-item.active
+          img(class="w-100 img__slider", src="/img/IMG-20250716-WA0034.jpg", alt="Image")
+          .carousel-caption.d-flex.flex-column.align-items-center.justify-content-center
+            .p-3(style="max-width: 900px;")
+              i.fa.fa-home.fa-3x.text-primary.mb-4.d-none.d-sm-block
+              h1.display-2.text-uppercase.text-white.mb-md-4.slide-text Leading the future of energy with innovative solutions and sustainable practices
+              a.btn.btn-primary.py-md-3.px-md-5.mt-2.slide-btn(href="/about") about us
+        .carousel-item
+          img(class="w-100 img__slider", src="/img/IMG-20250716-WA0042.jpg", alt="Image")
+          .carousel-caption.d-flex.flex-column.align-items-center.justify-content-center
+            .p-3(style="max-width: 900px;")
+              i.fa.fa-tools.fa-3x.text-primary.mb-4.d-none.d-sm-block
+              h1.display-2.text-uppercase.text-white.mb-md-4.slide-text We Are Trusted For Your Project
+              a.btn.btn-primary.py-md-3.px-md-5.mt-2.slide-btn(href="/contact") Contact Us
+      button.carousel-control-prev(type="button", data-bs-target="#header-carousel", data-bs-slide="prev")
+        span.carousel-control-prev-icon(aria-hidden="true")
+        span.visually-hidden Previous
+      button.carousel-control-next(type="button", data-bs-target="#header-carousel", data-bs-slide="next")
+        span.carousel-control-next-icon(aria-hidden="true")
+        span.visually-hidden Next
+  // Carousel End
+  // About Start
+  .about-section.container-fluid.py-6.px-5
+    .row.g-5.px-5
+      .col-lg-6
+        h1.display-5.text-uppercase.mb-4 We are 
+          span.text-primary the Best 
+          | at what
+          br
+          | we do
+        h4.text-uppercase.mb-3.text-body.fs-5 our vision is to be a leading oil and gas services provider with excellent reference in the energy sector
+        p Our mission is to engineer, procure, construct, install and commission quality and cost efficient oil and gas infrastructure in a safe environment
+        h5 To achieve these, we need;
+        .row.gx-5.py-2
+          .col-sm-6.mb-2
+            p.fw-bold.mb-2
+              i.fa.fa-check.text-primary.me-3
+              | Peaceful commumity relationship
+            p.fw-bold.mb-2
+              i.fa.fa-check.text-primary.me-3
+              | Competent Workforce
+            p.fw-bold.mb-2
+              i.fa.fa-check.text-primary.me-3
+              | Credible HSSE plans
+          .col-sm-6.mb-2
+            p.fw-bold.mb-2
+              i.fa.fa-check.text-primary.me-3
+              | Adherance to regulations
+            p.fw-bold.mb-2
+              i.fa.fa-check.text-primary.me-3
+              | Competent technical partnership
+            p.fw-bold.mb-2
+              i.fa.fa-check.text-primary.me-3
+              | Smooth communication flow
+        p.mb-4 Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos labore
+        img(src="/img/signature.jpg", alt="signature")
+      .col-lg-5.offset-1.pb-5(style="min-height: 400px;")
+        .position-relative.bg-dark-radial.h-100.ms-5
+          img.position-absolute.w-100.h-100.mt-5.ms-n5(src="/img/IMG-20250716-WA0045.jpg", style="object-fit: cover;")
+  // About End
+  // Services Start
+  .container-fluid.bg-light.py-6.px-5.service-section
+    .text-center.mx-auto.mb-5(style="max-width: 600px;")
+      h1.display-5.text-uppercase.mb-4.text-light We Provide 
+        span.text-primary The Best 
+        | Oil and Gas Services
+    .row.g-5
+      .col-lg-4.col-md-6
+        .service-item.bg-white.d-flex.flex-column.align-items-center.text-center
+          img.img-fluid.service-img(src="/img/IMG-20250716-WA0049.jpg", alt="")
+          // <div class="service-icon bg-white">
+          // <i class="fa fa-3x fa-building text-primary"></i>
+          // </div>
+          .px-4.pb-4.mt-4
+            h4.text-uppercase.mb-3.sub-title Onshore laying of oil and gas Pipeline
+            p Duo dolore et diam sed ipsum stet amet duo diam. Rebum amet ut amet sed erat sed sed amet magna elitr amet kasd diam duo
+            a.btn.text-primary(href="#") Read More 
+              i.bi.bi-arrow-right
+      .col-lg-4.col-md-6
+        .service-item.bg-white.rounded.d-flex.flex-column.align-items-center.text-center
+          img.img-fluid.service-img(src="/img/IMG-20250716-WA0033.jpg", alt="")
+          //
+            <div class="service-icon bg-white">
+            <i class="fa fa-3x fa-home text-primary"></i>
+            </div>
+          .px-4.pb-4.mt-4
+            h4.text-uppercase.mb-3.sub-title Pipeline leak repairs using clamps
+            p Duo dolore et diam sed ipsum stet amet duo diam. Rebum amet ut amet sed erat sed sed amet magna elitr amet kasd diam duo
+            a.btn.text-primary(href="#") Read More 
+              i.bi.bi-arrow-right
+      .col-lg-4.col-md-6
+        .service-item.bg-white.rounded.d-flex.flex-column.align-items-center.text-center
+          img.img-fluid.service-img(src="/img/IMG-20250716-WA0032.jpg", alt="")
+          //
+            <div class="service-icon bg-white">
+            <i class="fa fa-3x fa-drafting-compass text-primary"></i>
+            </div>
+          .px-4.pb-4.mt-4
+            h4.text-uppercase.mb-3.sub-title manifold upgrade and maintenance
+            p Duo dolore et diam sed ipsum stet amet duo diam. Rebum amet ut amet sed erat sed sed amet magna elitr amet kasd diam duo
+            a.btn.text-primary(href="#") Read More 
+              i.bi.bi-arrow-right
+      .col-lg-4.col-md-6.d-none.d-md-block
+        .service-item.bg-white.rounded.d-flex.flex-column.align-items-center.text-center
+          img.img-fluid(src="/img/IMG-20250716-WA0015.jpg", alt="")
+          //
+            <div class="service-icon bg-white">
+            <i class="fa fa-3x fa-palette text-primary"></i>
+            </div>
+          .px-4.pb-4.mt-4
+            h4.text-uppercase.mb-3.sub-title wellhead fabrication and maintenance
+            p Duo dolore et diam sed ipsum stet amet duo diam. Rebum amet ut amet sed erat sed sed amet magna elitr amet kasd diam duo
+            a.btn.text-primary(href="#") Read More 
+              i.bi.bi-arrow-right
+      .col-lg-4.col-md-6.d-none.d-lg-block
+        .service-item.bg-white.rounded.d-flex.flex-column.align-items-center.text-center
+          img.img-fluid(src="/img/IMG-20250716-WA0020.jpg", alt="service image")
+          //
+            <div class="service-icon bg-white">
+            <i class="fa fa-3x fa-tools text-primary"></i>
+            </div>
+          .px-4.pb-4.mt-4
+            h4.text-uppercase.mb-3.sub-title barrel assembly modification and maintenance
+            p Duo dolore et diam sed ipsum stet amet duo diam. Rebum amet ut amet sed erat sed sed amet magna elitr amet kasd diam duo
+            a.btn.text-primary(href="#") Read More 
+              i.bi.bi-arrow-right
+      .col-lg-4.col-md-6.d-none.d-lg-block
+        .service-item.bg-white.rounded.d-flex.flex-column.align-items-center.text-center
+          img.img-fluid(src="/img/IMG-20250716-WA0023.jpg", alt="service image")
+          //
+            <div class="service-icon bg-white">
+            <i class="fa fa-3x fa-paint-brush text-primary"></i>
+            </div>
+          .px-4.pb-4.mt-4
+            h4.text-uppercase.mb-3.sub-title riser wall re-enforcement and upgrade
+            p Duo dolore et diam sed ipsum stet amet duo diam. Rebum amet ut amet sed erat sed sed amet magna elitr amet kasd diam duo
+            a.btn.text-primary(href="#") Read More 
+              i.bi.bi-arrow-right
+  // Services End
+  // Appointment Start
+  .container-fluid.py-6.px-5
+    .row.gx-5
+      .col-lg-4.mb-5.mb-lg-0
+        .mb-4
+          h1.display-5.text-uppercase.mb-4 Request A 
+            span.text-primary Call Back
+        p.mb-5
+          b Looking to discuss a project or explore our services? 
+            br 
+          |Leave your details and a member of our team will reach out to you shortly with tailored solutions, our experts are ready to assist. We’re committed to providing reliable, industry-specific guidance to help you move forward with confidence.
+        a.btn.btn-primary.py-3.px-5(href="/contact").animate-from-down Get in touch
+      .col-lg-8
+        .bg-light.text-center.p-5
+          form
+            .row.g-3
+              .col-12.col-sm-6
+                input.form-control.border-0(type="text", placeholder="Your Name", style="height: 55px;")
+              .col-12.col-sm-6
+                input.form-control.border-0(type="email", placeholder="Your Email", style="height: 55px;")
+              .col-12.col-sm-6
+                #date.date(data-target-input="nearest")
+                  input.form-control.border-0.datetimepicker-input(type="text", placeholder="Call Back Date", data-target="#date", data-toggle="datetimepicker", style="height: 55px;")
+              .col-12.col-sm-6
+                #time.time(data-target-input="nearest")
+                  input.form-control.border-0.datetimepicker-input(type="text", placeholder="Call Back Time", data-target="#time", data-toggle="datetimepicker", style="height: 55px;")
+              .col-12
+                textarea.form-control.border-0(rows="5", placeholder="Message")
+              .col-12
+                button.btn.btn-primary.w-100.py-3(type="submit") Submit Request
+  // Appointment End
+  // Portfolio Start
+  .container-fluid.bg-light.py-6.px-5
+    .text-center.mx-auto.mb-5(style="max-width: 600px;")
+      h1.display-5.text-uppercase.mb-4.portfolio-heading Some Of Our 
+        span.text-primary Popular 
+        | Dream Projects
+    .row.gx-5
+      .col-12.text-center
+        .d-inline-block.bg-dark-radial.text-center.pt-4.px-5.mb-5.portfolio-summary
+          ul#portfolio-flters.list-inline.mb-0
+            li.btn.btn-outline-primary.bg-white.p-2.active.mx-2.mb-4(data-filter="*")
+              img(src="/img/1000000447.jpg", style="width: 150px; height: 100px;")
+              .position-absolute.top-0.start-0.end-0.bottom-0.m-2.d-flex.align-items-center.justify-content-center(style="background: rgba(4, 15, 40, .3);")
+                h6.text-white.text-uppercase.m-0 manifold
+            li.btn.btn-outline-primary.bg-white.p-2.mx-2.mb-4()
+              img(src="/img/DSC00299.jpg", style="width: 150px; height: 100px;")
+              .position-absolute.top-0.start-0.end-0.bottom-0.m-2.d-flex.align-items-center.justify-content-center(style="background: rgba(4, 15, 40, .3);")
+                h6.text-white.text-uppercase.m-0 Clamping
+            li.btn.btn-outline-primary.bg-white.p-2.mx-2.mb-4()
+              img(src="/img/IMG-20250327-WA0015.jpg", style="width: 150px; height: 100px;")
+              .position-absolute.top-0.start-0.end-0.bottom-0.m-2.d-flex.align-items-center.justify-content-center(style="background: rgba(4, 15, 40, .3);")
+                h6.text-white.text-uppercase.m-0 split tee
+    .row.g-5.portfolio-container
+      .col-xl-4.col-lg-6.col-md-6.portfolio-item.first
+        .position-relative.portfolio-box
+          img.img-fluid.w-100(src="/img/IMG-20250513-WA0011.jpg", alt="14\" sectional replacement")
+          a.portfolio-title.shadow-sm(href="#")
+            p.h4.text-uppercase 14&quot; sectional replacement
+            span.text-body
+              i.fa.fa-map-marker-alt.text-primary.me-2
+              | Ikarama, Bayelsa, Nigeria
+          a.portfolio-btn(href="/img/IMG-20250513-WA0011.jpg", data-lightbox="portfolio")
+            i.bi.bi-plus.text-white
+      .col-xl-4.col-lg-6.col-md-6.portfolio-item.second
+        .position-relative.portfolio-box
+          img.img-fluid.w-100(src="/img/DSC00299.jpg", alt="16\" leak repair using clamp")
+          a.portfolio-title.shadow-sm(href="#")
+            p.h4.text-uppercase 16&quot; leak repair using clamp
+            span.text-body
+              i.fa.fa-map-marker-alt.text-primary.me-2
+              | Egbema, Imo, Nigeria
+          a.portfolio-btn(href="/img/DSC00299.jpg", data-lightbox="portfolio")
+            i.bi.bi-plus.text-white
+      .col-xl-4.col-lg-6.col-md-6.portfolio-item.first
+        .position-relative.portfolio-box
+          img.img-fluid.w-100(src="/img/IMG-20250327-WA0015.jpg", alt="28\" split-tee installation")
+          a.portfolio-title.shadow-sm(href="#")
+            p.h4.text-uppercase 28&quot; split-tee installation
+            span.text-body
+              i.fa.fa-map-marker-alt.text-primary.me-2
+              | Elelenwo, Rivers, Nigeria
+          a.portfolio-btn(href="/img/IMG-20250327-WA0015.jpg", data-lightbox="portfolio")
+            i.bi.bi-plus.text-white
+      .col-xl-4.col-lg-6.col-md-6.portfolio-item.second
+        .position-relative.portfolio-box
+          img.img-fluid.w-100(src="/img/1000000445.jpg", alt="24\" valve change out and installation")
+          a.portfolio-title.shadow-sm(href="#")
+            p.h4.text-uppercase 24&quot; valve change out and installation
+            span.text-body
+              i.fa.fa-map-marker-alt.text-primary.me-2
+              | Eleme, Rivers, Nigeria
+          a.portfolio-btn(href="/img/1000000445.jpg", data-lightbox="portfolio")
+            i.bi.bi-plus.text-white
+      .col-xl-4.col-lg-6.col-md-6.portfolio-item.first
+        .position-relative.portfolio-box
+          img.img-fluid.w-100(src="/img/IMG-20240823-WA0011.jpg", alt="28\" sleeve installation")
+          a.portfolio-title.shadow-sm(href="#")
+            p.h4.text-uppercase 28&quot; sleeve installation
+            span.text-body
+              i.fa.fa-map-marker-alt.text-primary.me-2
+              | Bodo, Rivers, Nigeria
+          a.portfolio-btn(href="/img/IMG-20240823-WA0011.jpg", data-lightbox="portfolio")
+            i.bi.bi-plus.text-white
+      .col-xl-4.col-lg-6.col-md-6.portfolio-item.second
+        .position-relative.portfolio-box
+          img.img-fluid.w-100(src="/img/IMG-20240530-WA0058.jpg", alt="4\" sectional replacement")
+          a.portfolio-title.shadow-sm(href="#")
+            p.h4.text-uppercase 4&quot; sectional replacement
+            span.text-body
+              i.fa.fa-map-marker-alt.text-primary.me-2
+              | Ibaa, Rivers, Nigeria
+          a.portfolio-btn(href="/img/IMG-20240530-WA0058.jpg", data-lightbox="portfolio")
+            i.bi.bi-plus.text-white
+    .project-count.text-center.mt-5
+      h1.display-2.text-uppercase.mb-4
+        span.counter(data-target='80') 0
+        |+
+      p.fs-5.text-dark.animate-from-left
+        b Total Projects Completed
+      a.btn.btn-primary.py-3.px-5.animate-from-down(href="/portfolio") View All Projects
+  // Portfolio End
+  // Team Start
+  .container-fluid.py-6.px-5
+    .text-center.mx-auto.mb-5(style="max-width: 600px;")
+      h1.display-5.text-uppercase.mb-4 We Are 
+        span.text-primary Professional &amp; Expert 
+        | Workers
+    .row.g-5
+      .col-xl-3.col-lg-4.col-md-6
+        .row.g-0
+          .col-10(style="min-height: 300px;")
+            .position-relative.h-100
+              img.position-absolute.w-100.h-100(src="/img/IMG-20250716-WA0071.jpg", style="object-fit: cover;")
+          .col-2
+            .h-100.d-flex.flex-column.align-items-center.justify-content-between.bg-light
+              a.btn(href="#")
+                i.fab.fa-twitter
+              a.btn(href="https://www.facebook.com/share/16chm9Ty5b/", target="_blank")
+                i.fab.fa-facebook-f
+              a.btn(href="#")
+                i.fab.fa-linkedin-in
+              a.btn(href="#")
+                i.fab.fa-instagram
+              // <a class="btn" href="#"><i class="fab fa-youtube"></i></a>
+          .col-12
+            .bg-light.p-4
+              h4.text-uppercase.sub-title dr benson igboejesi
+              span CEO &amp; Founder
+      .col-xl-3.col-lg-4.col-md-6
+        .row.g-0
+          .col-10(style="min-height: 300px;")
+            .position-relative.h-100
+              img.position-absolute.w-100.h-100(src="/img/IMG-20250716-WA0072.jpg", style="object-fit: cover;")
+          .col-2
+            .h-100.d-flex.flex-column.align-items-center.justify-content-between.bg-light
+              a.btn(href="#")
+                i.fab.fa-twitter
+              a.btn(href="#")
+                i.fab.fa-facebook-f
+              a.btn(href="#")
+                i.fab.fa-linkedin-in
+              a.btn(href="#")
+                i.fab.fa-instagram
+              // <a class="btn" href="#"><i class="fab fa-youtube"></i></a>
+          .col-12
+            .bg-light.p-4
+              h4.text-uppercase.sub-title igboejesi prince
+              span Project Manager
+      .col-xl-3.col-lg-4.col-md-6
+        .row.g-0
+          .col-10(style="min-height: 300px;")
+            .position-relative.h-100
+              img.position-absolute.w-100.h-100(src="/img/IMG-20250716-WA0073.jpg", style="object-fit: cover;")
+          .col-2
+            .h-100.d-flex.flex-column.align-items-center.justify-content-between.bg-light
+              a.btn(href="#")
+                i.fab.fa-twitter
+              a.btn(href="#")
+                i.fab.fa-facebook-f
+              a.btn(href="#")
+                i.fab.fa-linkedin-in
+              a.btn(href="#")
+                i.fab.fa-instagram
+              // <a class="btn" href="#"><i class="fab fa-youtube"></i></a>
+          .col-12
+            .bg-light.p-4
+              h4.text-uppercase.sub-title ewa joseph
+              span Operations/logistics
+      .col-xl-3.col-lg-4.col-md-6
+        .row.g-0
+          .col-10(style="min-height: 300px;")
+            .position-relative.h-100
+              img.position-absolute.w-100.h-100(src="/img/team-4.jpg", style="object-fit: cover;")
+          .col-2
+            .h-100.d-flex.flex-column.align-items-center.justify-content-between.bg-light
+              a.btn(href="#")
+                i.fab.fa-twitter
+              a.btn(href="#")
+                i.fab.fa-facebook-f
+              a.btn(href="#")
+                i.fab.fa-linkedin-in
+              a.btn(href="#")
+                i.fab.fa-instagram
+              
+          .col-12
+            .bg-light.p-4
+              h4.text-uppercase.sub-title Chukwumuanya timothy
+              span Fitter/Foreman
+  // Team End
+  // Testimonial Start
+  .container-fluid.bg-light.py-6.px-5
+    .text-center.mx-auto.mb-5(style="max-width: 600px;")
+      h1.display-5.text-uppercase.mb-4 What Our 
+        span.text-primary Happy Cleints 
+        | Say!!!
+    .row.gx-0.align-items-center
+      .col-xl-4.col-lg-5.d-none.d-lg-block
+        img.img-fluid.w-100.h-25(src="/img/Screenshot_20250722-212556.jpg")
+      .col-xl-8.col-lg-7.col-md-12
+        .testimonial.bg-light
+          .owl-carousel.testimonial-carousel
+            .row.gx-4.align-items-center
+              .col-xl-4.col-lg-5.col-md-5
+                img.client-img.img-fluid.w-100.h-100.bg-light.p-lg-3.mb-4.mb-md-0(src="/img/renaissance-logo.png", alt="renaissance logo")
+              .col-xl-8.col-lg-7.col-md-7
+                h4.text-uppercase.mb-0.sub-title renaissance africa energy company limited
+                p Profession
+                p.fs-5.mb-0
+                  i.fa.fa-2x.fa-quote-left.text-primary.me-2
+                  | Dolores sed duo
+                  | clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem
+                  | lorem magna ut labore et tempor diam tempor erat. Erat dolor rebum sit
+                  | ipsum.
+            .row.gx-4.align-items-center
+              .col-xl-4.col-lg-5.col-md-5
+                img.client-img.img-fluid.w-100.h-100.bg-light.p-lg-3.mb-4.mb-md-0(src="/img/strides-logo.png", alt="stride logo")
+              .col-xl-8.col-lg-7.col-md-7
+                h4.text-uppercase.mb-0.sub-title Strides Energy and maritime limited
+                p Profession
+                p.fs-5.mb-0
+                  i.fa.fa-2x.fa-quote-left.text-primary.me-2
+                  | Dolores sed duo
+                  | clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem
+                  | lorem magna ut labore et tempor diam tempor erat. Erat dolor rebum sit
+                  | ipsum.
+            
+            .row.gx-4.align-items-center
+              .col-xl-4.col-lg-5.col-md-5
+                img.client-img.img-fluid.w-100.h-100.bg-light.p-lg-3.mb-4.mb-md-0(src="/img/houston-logo.png", alt="stride logo")
+              .col-xl-8.col-lg-7.col-md-7
+                h4.text-uppercase.mb-0.sub-title houston engineering and maritime services limited
+                p Profession
+                p.fs-5.mb-0
+                  i.fa.fa-2x.fa-quote-left.text-primary.me-2
+                  | Dolores sed duo
+                  | clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem
+                  | lorem magna ut labore et tempor diam tempor erat. Erat dolor rebum sit
+                  | ipsum.
+  // Testimonial End
+  // Blog Start
+  //
+    <div class="container-fluid py-6 px-5">
+    <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+    <h1 class="display-5 text-uppercase mb-4">Latest <span class="text-primary">Articles</span> From Our Blog Post</h1>
+    </div>
+    <div class="row g-5">
+    <div class="col-lg-4 col-md-6">
+    <div class="bg-light">
+    <img class="img-fluid" src="/img/blog-1.jpg" alt="">
+    <div class="p-4">
+    <div class="d-flex justify-content-between mb-4">
+    <div class="d-flex align-items-center">
+    <img class="rounded-circle me-2" src="/img/user.jpg" width="35" height="35" alt="">
+    <span>John Doe</span>
+    </div>
+    <div class="d-flex align-items-center">
+    <span class="ms-3"><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</span>
+    </div>
+    </div>
+    <h4 class="text-uppercase mb-3 sub-title">Rebum diam clita lorem erat magna est erat</h4>
+    <a class="text-uppercase fw-bold" href="#">Read More <i class="bi bi-arrow-right"></i></a>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+    <div class="bg-light">
+    <img class="img-fluid" src="/img/blog-2.jpg" alt="">
+    <div class="p-4">
+    <div class="d-flex justify-content-between mb-4">
+    <div class="d-flex align-items-center">
+    <img class="rounded-circle me-2" src="/img/user.jpg" width="35" height="35" alt="">
+    <span>John Doe</span>
+    </div>
+    <div class="d-flex align-items-center">
+    <span class="ms-3"><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</span>
+    </div>
+    </div>
+    <h4 class="text-uppercase mb-3 sub-title">Rebum diam clita lorem erat magna est erat</h4>
+    <a class="text-uppercase fw-bold" href="#">Read More <i class="bi bi-arrow-right"></i></a>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+    <div class="bg-light">
+    <img class="img-fluid" src="/img/blog-3.jpg" alt="">
+    <div class="p-4">
+    <div class="d-flex justify-content-between mb-4">
+    <div class="d-flex align-items-center">
+    <img class="rounded-circle me-2" src="/img/user.jpg" width="35" height="35" alt="">
+    <span>John Doe</span>
+    </div>
+    <div class="d-flex align-items-center">
+    <span class="ms-3"><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</span>
+    </div>
+    </div>
+    <h4 class="text-uppercase mb-3 sub-title">Rebum diam clita lorem erat magna est erat</h4>
+    <a class="text-uppercase fw-bold" href="#">Read More <i class="bi bi-arrow-right"></i></a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+  // Blog End
+    

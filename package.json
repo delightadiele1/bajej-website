@@ -1,0 +1,33 @@
+{
+  "name": "bajej-website",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:prod": "SET NODE_ENV=production && nodemon server.js",
+    "watch:js": "parcel public/js/main.js --target bundle",
+    "build": "parcel build public/js/main.js --target bundle"
+  },
+  "targets": {
+    "bundle": {
+      "distDir": "public/bundle",
+      "outputFormat": "esmodule",
+      "isLibrary": true,
+      "includeNodeModules": true,
+      "sourceMap": false,
+      "context": "browser"
+    }
+  },
+  "author": "Delight",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "gsap": "^3.13.0",
+    "pug": "^3.0.3"
+  },
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  }
+}
