@@ -6,7 +6,7 @@
     "start": "node server.js",
     "start:prod": "SET NODE_ENV=production && nodemon server.js",
     "watch:js": "parcel public/js/main.js --target bundle",
-    "build": "parcel build public/js/main.js --target bundle"
+    "build": "parcel build public/js/main.js --no-cache --target bundle"
   },
   "targets": {
     "bundle": {
