@@ -66,6 +66,9 @@
     
 })(jQuery);
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 // GSAP Animation for Navbar Brand
  gsap.to(".navbar-brand", {
     x: 0,
@@ -82,6 +85,20 @@ gsap.to(".navbar-nav", {
     duration: 1,
     ease: "power2.out",
     delay: 1.5
+});
+
+gsap.to(".fade-out", {
+    opacity: 1,
+    duration: 1,
+    ease: "power2.out",
+    delay: 1
+});
+
+gsap.to(".about-text", {
+    opacity: 1,
+    duration: 1,
+    y: 0,
+    ease: "power2.out",
 });
 
 // GSAP Animation for header carousel
@@ -132,8 +149,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -165,8 +180,8 @@ gsap.utils.toArray('.service-item').forEach(item => {
     });
 })
 
-// GSAP Animation for Portfolio Section
-gsap.utils.toArray('.portfolio-heading').forEach(item => {
+// GSAP Animation from top
+gsap.utils.toArray('.animate-from-top').forEach(item => {
     gsap.to(item, {
         scrollTrigger: {
             trigger: item,
@@ -233,6 +248,21 @@ gsap.utils.toArray('.animate-from-left').forEach(item => {
     });
 });
 
+gsap.utils.toArray('.animate-from-right').forEach(item => {
+    gsap.to(item, {
+        scrollTrigger: {
+            trigger: item,
+            start: "top 80%",
+            toggleActions: "play none none reset"
+        },
+        opacity: 1,
+        duration: 1,
+        x: 0,
+        ease: "power1.out",
+    });
+});
+
+// Animate from down
 gsap.utils.toArray('.animate-from-down').forEach(item => {
     gsap.to(item, {
         scrollTrigger: {
@@ -246,3 +276,18 @@ gsap.utils.toArray('.animate-from-down').forEach(item => {
         ease: "power1.out",
     });
 });
+
+// fade in animation
+gsap.utils.toArray('fade-in').forEach(item => {
+    gsap.to(item, {
+        scrollTrigger: {
+            trigger: item,
+            start: "top 80%",
+            toggleActions: "play none none reset"
+        },
+        opacity: 1,
+        duration: 1,
+        delay: 1,
+        ease: "power1.out"
+    }) 
+})

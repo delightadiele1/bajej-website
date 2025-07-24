@@ -6309,6 +6309,18 @@ $2215997bc8312f01$var$_getGSAP() && $2215997bc8312f01$var$gsap.registerPlugin($2
     ease: "power2.out",
     delay: 1.5
 });
+(0, $fa00f704bb212b71$export$99ee26438460406a).to(".fade-out", {
+    opacity: 1,
+    duration: 1,
+    ease: "power2.out",
+    delay: 1
+});
+(0, $fa00f704bb212b71$export$99ee26438460406a).to(".about-text", {
+    opacity: 1,
+    duration: 1,
+    y: 0,
+    ease: "power2.out"
+});
 // GSAP Animation for header carousel
 document.addEventListener("DOMContentLoaded", function() {
     const carouselElement = document.querySelector('#header-carousel');
@@ -6377,8 +6389,8 @@ function $fefc419833cc4da9$var$animateSlideContent(slide) {
         ease: "power1.out"
     });
 });
-// GSAP Animation for Portfolio Section
-(0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.portfolio-heading').forEach((item)=>{
+// GSAP Animation from top
+(0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.animate-from-top').forEach((item)=>{
     (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
         scrollTrigger: {
             trigger: item,
@@ -6441,6 +6453,20 @@ $fefc419833cc4da9$var$counters.forEach((counter)=>{
         ease: "power1.out"
     });
 });
+(0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.animate-from-right').forEach((item)=>{
+    (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
+        scrollTrigger: {
+            trigger: item,
+            start: "top 80%",
+            toggleActions: "play none none reset"
+        },
+        opacity: 1,
+        duration: 1,
+        x: 0,
+        ease: "power1.out"
+    });
+});
+// Animate from down
 (0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.animate-from-down').forEach((item)=>{
     (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
         scrollTrigger: {
@@ -6451,6 +6477,20 @@ $fefc419833cc4da9$var$counters.forEach((counter)=>{
         opacity: 1,
         duration: 1,
         y: 0,
+        ease: "power1.out"
+    });
+});
+// fade in animation
+(0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('fade-in').forEach((item)=>{
+    (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
+        scrollTrigger: {
+            trigger: item,
+            start: "top 80%",
+            toggleActions: "play none none reset"
+        },
+        opacity: 1,
+        duration: 1,
+        delay: 1,
         ease: "power1.out"
     });
 });

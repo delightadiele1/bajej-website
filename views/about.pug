@@ -1,0 +1,177 @@
+extends base
+
+block content
+    //  Page Header Start 
+    .container-fluid.about__page-header
+        h1.display-5.text-primary.mb-3.about-text About Us
+        .d-inline-flex.text-primary.fade-out
+            h6.m-0
+                a.text-white(href="/") Home &gt;&gt;
+                h6.text-white.m-0.px-3 /
+            h6.text-primary.m-0 About
+    //  Page Header Start 
+    // About Start
+    .container.about__page.page-section.py-6
+        .row.g-5
+            .col-lg-6.text-gray.animate-from-left
+                h1.display-5.mb-4.about-headings.ps-2.py-2(style="border-left: 6px solid #f4d73c") BAJEJ 
+                    span.text-primary Oil & Gas 
+                    | Limited
+                h3.mb-4.about__us-text.z-1000(style="font-family:'Courier New', Courier, monospace") About Us(Logo)
+                p
+                    b Bajej Oil & Gas Limited 
+                    | is a Nigerian Engineering, Construction and Procurement [EPC] Oil and Gas Company, incorporated on May 18, 2012 with a fully paid-up capital of ₦1,000,000.00 - 1Million Naira. The company started business in March 2015, and presently, shareholders fund is well over ₦1,000,000,000.00 - 1 Billion Naira.
+                p Headquartered in Rivers, Nigeria, we are driven by a team of experienced professionals dedicated to safety, efficiency, and community development. At 
+                    b Bajej Oil & Gas, 
+                    | we believe in powering growth—one project, one partnership, and one community at a time.
+            .col-lg-6.text-lg-end.text-center.animate-from-right
+                div.w-100
+                    img.image-fluid.w-100(src="/img/IMG-20250716-WA0033.jpg", alt="About Image", style="border: 10px solid #f4d73c; box-shadow: 0 0 50px rgba(43, 41, 41, 0.9);")
+
+    // About End
+    // About Mission Start
+    .mission-background
+        .container.page-section.py-6.about-mission
+            .row.g-5
+                .col-lg-4.text-gray
+                    .p-3.mission-item
+                        h4.mb-4.about-headings.ps-2.py-2.sub-title(style="border-left: 6px solid #f4d73c") Our 
+                            br
+                            | Vision
+                        p Our Vision is to be a leading Oil and Gas Services Provider with Excellent Reference in the Energy Sector.
+                        p.pb-6 To be Africa’s most trusted and innovative energy company, driving sustainable growth and transforming lives through safe, efficient, and responsible oil and gas operations.
+
+                
+                .col-lg-4
+                    .p-3.mission-item
+                        h4.mb-4.about-headings.ps-2.py-2.sub-title(style="border-left: 6px solid #f4d73c") Our 
+                            br
+                            | Mision
+                        p.text-gray Our Mission is to engineer, procure, construct, install and commission quality and cost efficient oil and gas infrastructure in a safe environment.
+                        h6 To achieve these, we need;
+                        p
+                            i.fa.fa-check.text-primary.me-3
+                            | Peaceful commumity relationship
+                        p
+                            i.fa.fa-check.text-primary.me-3
+                            | Competent Workforce
+                        p
+                            i.fa.fa-check.text-primary.me-3
+                            | Credible HSSE plans
+                        p
+                            i.fa.fa-check.text-primary.me-3
+                            | Adherance to regulations
+                        p
+                            i.fa.fa-check.text-primary.me-3
+                            | Competent technical partnership
+                        p
+                            i.fa.fa-check.text-primary.me-3
+                            | Smooth communication flow
+                .col-lg-4
+                    .p-3.mission-item
+                        h4.mb-4.about-headings.ps-2.py-2.sub-title(style="border-left: 6px solid #f4d73c") Our 
+                            br
+                            | Core Values
+                        p
+                            i.fa.fa-check.text-primary.me-3
+                            | Integrity
+                        p
+                            i.fa.fa-check.text-primary.me-3
+                            | Safety
+                        p
+                            i.fa.fa-check.text-primary.me-3
+                            | Excellence
+                        p
+                            i.fa.fa-check.text-primary.me-3
+                            | Sustainability
+                        p
+                            i.fa.fa-check.text-primary.me-3
+                            | Collaboration
+                        p.pb-5
+                            i.fa.fa-check.text-primary.me-3
+                            | Accountability 
+    
+    // About Mission End
+    // About Team Start
+
+    .management
+        .container.page-section.py-6.about-team
+            h1.display-5.mb-4.about-headings.ps-2.py-2(style="border-left: 6px solid #f4d73c") 
+                span.d-inline-block.animate-from-right The Management
+            .row.g-5.pt-5
+                .col-lg-4.col-md-6.mx-auto
+                    .row.g-0
+                        .col-10(style="min-height: 300px;")
+                            .position-relative.h-100
+                                img.position-absolute.w-100.h-100(src="/img/IMG-20250716-WA0071.jpg", style="object-fit: cover;")
+                        .col-2
+                            .h-100.d-flex.flex-column.align-items-center.justify-content-between.bg-light
+                                a.btn(href="#")
+                                    i.fab.fa-twitter
+                                a.btn(href="https://www.facebook.com/share/16chm9Ty5b/", target="_blank")
+                                    i.fab.fa-facebook-f
+                                a.btn(href="#")
+                                    i.fab.fa-linkedin-in
+                                a.btn(href="#")
+                                    i.fab.fa-instagram
+                                // <a class="btn" href="#"><i class="fab fa-youtube"></i></a>
+                        .col-12
+                            .bg-light.p-4
+                                h4.text-uppercase.sub-title dr benson igboejesi
+                                span CEO &amp; Founder
+
+                .col-lg-4.col-md-6.mx-auto
+                    .row.g-0
+                        .col-10(style="min-height: 300px;")
+                            .position-relative.h-100
+                                img.position-absolute.w-100.h-100(src="/img/IMG-20250716-WA0072.jpg", style="object-fit: cover;")
+                        .col-2
+                            .h-100.d-flex.flex-column.align-items-center.justify-content-between.bg-light
+                                a.btn(href="#")
+                                    i.fab.fa-twitter
+                                a.btn(href="https://www.facebook.com/share/16chm9Ty5b/", target="_blank")
+                                    i.fab.fa-facebook-f
+                                a.btn(href="#")
+                                    i.fab.fa-linkedin-in
+                                a.btn(href="#")
+                                    i.fab.fa-instagram
+                                // <a class="btn" href="#"><i class="fab fa-youtube"></i></a>
+                        .col-12
+                            .bg-light.p-4
+                                h4.text-uppercase.sub-title igboejesi prince
+                                span Project engineer 
+
+                .col-lg-4.col-md-6.mx-auto
+                    .row.g-0
+                        .col-10(style="min-height: 300px;")
+                            .position-relative.h-100
+                                img.position-absolute.w-100.h-100(src="/img/IMG-20250716-WA0073.jpg", style="object-fit: cover;")
+                        .col-2
+                            .h-100.d-flex.flex-column.align-items-center.justify-content-between.bg-light
+                                a.btn(href="#")
+                                    i.fab.fa-twitter
+                                a.btn(href="https://www.facebook.com/share/16chm9Ty5b/", target="_blank")
+                                    i.fab.fa-facebook-f
+                                a.btn(href="#")
+                                    i.fab.fa-linkedin-in
+                                a.btn(href="#")
+                                    i.fab.fa-instagram
+                                // <a class="btn" href="#"><i class="fab fa-youtube"></i></a>
+                        .col-12
+                            .bg-light.p-4
+                                h4.text-uppercase.sub-title ewa joseph
+                                span Operations / logistics manager
+
+    .clients
+        .container.page-section.py-5.about-client
+            //- h1.display-5.mb-4.about-headings.ps-2.py-2(style="border-left: 6px solid #f4d73c") 
+            //-     span.d-inline-block.animate-from-right Our Clients
+            .row.g-5.my-auto
+                .col-6.col-lg-3.col-sm-4.mx-auto.text-center.my-auto
+                    img.img-fluid(src="/img/houston-logo.png", alt="houston")
+                .col-6.col-lg-3.col-sm-4.mx-auto.text-center.my-auto
+                    img.img-fluid(src="/img/strides-logo.png", alt="strides")
+                .col-lg-3.col-sm-4.d-none.d-md-block.mx-auto.text-center.my-auto
+                    img.img-fluid(src="/img/renaissance-logo.png", alt="renaissance")
+                .col-lg-3.col-sm-4.d-none.d-lg-block.mx-auto.text-center.my-auto
+                    img.img-fluid(src="/img/norton-logo.webp", alt="Norton")
