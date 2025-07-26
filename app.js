@@ -14,15 +14,21 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Route for the home page
 app.get('/', (req, res) => {
   res.status(200).render('index', {
-    title: 'Home'
+    title: 'Home',
   });
 })
 
 app.get('/about', (req, res) => {
   res.status(200).render('about', {
-    title: 'About Us'
+    title: 'About',
   });
 });
+
+app.get('/services', (req, res) => {
+  res.status(200).render('services', {
+    title: 'Services',
+  });
+})
 
 app.use((req, res) => {
   res.status(404).render('error');

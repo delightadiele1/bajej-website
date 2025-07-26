@@ -66,6 +66,45 @@
     
 })(jQuery);
 
+// JS code
+const serviceLinks = document.querySelectorAll('.service-links')
+const serviceContent = document.querySelectorAll('.service-content')
+const serviceSection = document.querySelector('#service-section')
+
+
+const clearActiveService = function () {
+    console.log("executed")
+    serviceLinks.forEach(function(link) {
+        link.querySelector('.service-list').classList.remove('active-service')
+    })
+}
+
+const hideService = function(){
+    console.log("executed-2")
+    serviceContent.forEach(function(content) {
+        console.log(content)
+        content.classList.add('hide-content')
+    })
+}
+
+serviceLinks.forEach(function(link) {
+    link.addEventListener('click', e => {
+        e.preventDefault()
+        clearActiveService()
+        hideService()
+        const target =  e.currentTarget.querySelector('.service-list')
+        target.classList.add('active-service')
+        console.log(target.dataset.bsInfo)
+        document.querySelector(`.${target.dataset.bsInfo}`).classList.remove('hide-content')
+        serviceSection.scrollIntoView({ behavior: 'smooth' })
+    })
+})
+
+
+
+
+// GSAP Animation
+
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -290,4 +329,20 @@ gsap.utils.toArray('fade-in').forEach(item => {
         delay: 1,
         ease: "power1.out"
     }) 
+})
+
+// SPIN ANIMATION
+gsap.utils.toArray('.spin-on-hover').forEach(item => {
+    gsap.to(item, {
+        scrollTrigger: {
+            trigger: item,
+            start: "top 80%",
+            toggleActions: "play none none reset"
+        },
+        rotation: 360,
+        duration: 1,
+        ease: "power1.out",
+        repeat: -1,
+        scrub: true
+    });
 })

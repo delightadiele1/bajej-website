@@ -1,0 +1,186 @@
+extends base
+
+mixin service-list(text, info, active='')
+    a(href="").service-links
+        li.text-white.bg-dark.p-3.mb-3.light.service-list(class=`${active}`, data-bs-info=`${info}`)
+            .row 
+                .col-1.my-auto
+                    i.fa.fa-check.text-primary.me-3
+                .col-11
+                    | #{text}
+
+mixin headings(text)
+    .service__item-toggle
+        h2.fs-3.text-center.display-5(style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;") #{text}.
+        .row 
+            .col-5
+                .line.border.border-1.rounded-pill.border-secondary.mt-2
+            .col-2.text-center.p-0
+                i.fa.fa-cog.text-primary.fs-3.spin-on-hover
+            .col-5
+                .line.border.border-1.rounded-pill.border-secondary.mt-2
+
+block content 
+
+    //  Page Header Start 
+    .container-fluid.about__page-header
+        h1.display-5.text-primary.mb-3.about-text Our Services
+            i.fa.fa-tools.fa-2x.text-primary.mb-4
+        .d-inline-flex.text-primary.fade-out
+            h6.m-0
+                a.text-white(href="/") Home &gt;&gt;
+                h6.text-white.m-0.px-3 /
+            h6.text-primary.m-0 Services
+    //  Page Header Start 
+    .container.page-section.py-6
+        .row.g-4
+            .col-lg-5.service__links-container
+                h1.display-5.mb-4.ps-2.py-2(style="border-left: 6px solid #f4d73c") Our 
+                    span.text-primary Services
+                .p-3(style="background-color: #eeedecff;")
+                    p.text-gray 
+                        b Bajej Oil & Gas LTD 
+                        | is highly specialized in key areas of the oil and gas industry, including but not limited to the following;
+                    ul.list-unstyled
+                        +service-list('Onshore Laying of Oil & Gas Pipeline, Pipeline Fabrication, Construction and Maintenance.', 'onshore__pipe-laying', 'active-service')
+                        +service-list('Pipeline Leak Repairs using Clamps, including Split-tee and Split Sleeve.', 'pipeLine__leak-repairs')
+                        +service-list('Valve Change out, installation and maintenance.', '2')
+                        +service-list('Manifold Upgrade, modification and maintenance.', '3')
+                        +service-list('Barrel assembly modification, Barrel Doors replacement and maintenance', '4')
+                        +service-list('Procurement of Oil & Gas Tools and Equipments.', '5')
+
+            .col-lg-7.mt-5.mt-lg-4#service-section
+                //- Onshore laying of pipeline
+                //- 
+                //- 
+                //-
+                .onshore__pipe-laying.service-content
+                    +headings('Onshore Laying of Oil & Gas Pipeline, Pipeline Fabrication, Construction and Maintenance')
+                    .row.g-4.pt-4
+                        h6.text-secondary.fs-4.mb-1(style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;") Onshore Pipeline services
+                        p.text-gray At 
+                            b Bajej Oil & Gas LTD
+                            | , we specialize in the onshore laying, fabrication, construction, and maintenance of oil and gas pipelines. With a commitment to safety, efficiency, and engineering excellence, we deliver end-to-end pipeline solutions that meet the highest industry standards.
+
+                    h6.display-5.fs-5.mb-4(style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;") Our Core Services include;
+                    p.text-secondary.mb-5.fs-4 1. 
+                        b   Pipeline Laying (Onshore)
+
+                    .row.g-4
+                        .col-sm-6
+                            img.img-fluid(src="/img/IMG-20250716-WA0049.jpg", alt="Pipe Laying Image")
+                        .col-sm-6
+                            img.img-fluid(src="/img/IMG-20250716-WA0070.jpg", alt="Pipe Laying Image")
+
+                    .text-gray.py-4
+                        p We provide professional onshore pipeline laying services for crude oil, natural gas, refined products, and water injection lines. Our capabilities include:
+                        ul
+                            li Trenching and pipeline alignment
+                            li Welding and joint coating
+                            li Backfilling and hydrotesting
+                            li Route optimization and terrain management
+                            li Environmentally responsible practices
+                        
+                    p.text-secondary.mb-4.fs-4 2. 
+                            b   Pipeline Fabrication
+
+                    .row.g-4
+                        .col-md-6.text-gray
+                            p Our in-house or on-site fabrication services ensure that your pipeline components are precision-built to spec:
+                            ul
+                                li Pipe spooling
+                                li Welding and non-destructive testing (NDT)
+                                li Bending and coating
+                                li Fabrication of manifolds, skids, and structural supports
+
+                        .col-md-6 
+                            img.img-fluid(src="/img/IMG-20250716-WA0051.jpg", alt="Pipe Laying Image")
+
+                //- Clamps leak repair
+                //- 
+                //- 
+                //- 
+
+                .pipeLine__leak-repairs.service-content.hide-content
+                    +headings('Pipeline Leak Repairs using Clamps, including Split-tee and Split Sleeve')
+                    .row.g-4.pt-4
+                        img.img-fluid(src="/img/IMG-20250716-WA0033.jpg", alt="Pipe Clamp Image")
+
+                    .row.g-4.pt-4
+                        h6.text-secondary.fs-4.mb-1(style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;") Pipeline Leak Repairs
+                        p.text-gray At 
+                            b Bajej Oil & Gas LTD
+                            | , we provide specialized pipeline leak repair services using industry-approved solutions such as repair clamps, split-tee fittings, and split sleeve enclosures. Our methods ensure safe, fast, and permanent repairs to both pressurized and depressurized onshore pipelines—without compromising pipeline integrity or safe.
+
+                    h6.display-5.fs-5.mb-4(style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;") Our Leak Repair Techniques;
+                    p.text-secondary.mb-4.fs-4 1. 
+                        b   🗜️ Repair Clamps
+
+                    .row.g-4
+                        .col-sm-6
+                            p.text-gray 
+                                b Bajej Oil & Gas 
+                                | provides professional pipeline leak repair services utilizing engineered repair clamps for fast, safe, and reliable intervention on onshore pipelines. Our clamp-based solutions are ideal for immediate leak containment and long-term sealing across a variety of pipeline diameters and pressures.
+                        .col-sm-6
+                            img.img-fluid(src="/img/DSC00299.jpg", alt="Pipe Laying Image")
+
+                    
+                        .col-sm-6.text-gray
+                            p 
+                                b Applications include:
+                            ul
+                                li Corrosion pinholes
+                                li Small cracks or fractures
+                                li Gasket or weld failures
+                                li Temporary or permanent repairs
+                                
+                        .col-sm-6.text-gray
+                            p 
+                                b Features:
+                            ul
+                                li Quick installation without shutdown (in many cases)
+                                li Stainless steel or carbon steel construction
+                                li High pressure and temperature ratings
+                                li Available in custom sizes for various pipe diameters
+
+                    p.text-secondary.mb-4.fs-4 2. 
+                        b  🔩 Split Tee Repairs 
+
+                    img.img-fluid(src="/img/IMG-20250327-WA0015.jpg")
+
+                    .row.g-4.text-gray.my-3
+                        p 
+                            b Bajej Oil & Gas 
+                            | delivers Split-Tee-based pipeline repair services for critical leak containment and structural reinforcement on pressurized lines—especially where flow continuity is essential. Our team executes precision field deployment of Split-Tee fittings as part of controlled hot tapping, line stop, or permanent leak repair projects.
+                        .col-sm-6
+                            p 
+                                b Use cases:
+
+                            ul 
+                                li Active pipelines where flow must be maintained
+                                li Preparation for future line tapping or bypass
+                                li Stronger reinforcement than basic clamps
+                        .col-sm-6
+                            p
+                                b Benefits:
+
+                            ul
+                                li Maintains continuous production during repair
+                                li Enables future valve or bypass installations
+                                li Designed to meet ASME and API standards
+
+                    p.text-secondary.mb-4.fs-4 2. 
+                        b  ⚙️ Split Sleeves Leak Repair
+
+                    .row.g-4.text-gray.my-3
+                        .col-sm-6
+                            p At 
+                                b Bajej Oil & Gas 
+                                | we offer split sleeve repair services as a dependable solution for restoring pipeline integrity in the face of corrosion damage, dents, or localized failures
+                            ul
+                                li External corrosion
+                                li Mechanical damage
+                                li Weld defects
+                                li Minor ruptures
+                        .col-sm-6
+                            img.img-fluid(src="/img/IMG-20240823-WA0011.jpg")

@@ -6293,6 +6293,39 @@ $2215997bc8312f01$var$_getGSAP() && $2215997bc8312f01$var$gsap.registerPlugin($2
         loop: true
     });
 })(jQuery);
+// JS code
+const $fefc419833cc4da9$var$serviceLinks = document.querySelectorAll('.service-links');
+const $fefc419833cc4da9$var$serviceContent = document.querySelectorAll('.service-content');
+const $fefc419833cc4da9$var$serviceSection = document.querySelector('#service-section');
+const $fefc419833cc4da9$var$clearActiveService = function() {
+    console.log("executed");
+    $fefc419833cc4da9$var$serviceLinks.forEach(function(link) {
+        link.querySelector('.service-list').classList.remove('active-service');
+    });
+};
+const $fefc419833cc4da9$var$hideService = function() {
+    console.log("executed-2");
+    $fefc419833cc4da9$var$serviceContent.forEach(function(content) {
+        console.log(content);
+        content.classList.add('hide-content');
+    });
+};
+$fefc419833cc4da9$var$serviceLinks.forEach(function(link) {
+    link.addEventListener('click', (e)=>{
+        e.preventDefault();
+        $fefc419833cc4da9$var$clearActiveService();
+        $fefc419833cc4da9$var$hideService();
+        const target1 = e.currentTarget.querySelector('.service-list');
+        target1.classList.add('active-service');
+        console.log(target1.dataset.bsInfo);
+        document.querySelector(`.${target1.dataset.bsInfo}`).classList.remove('hide-content');
+        $fefc419833cc4da9$var$serviceSection.scrollIntoView({
+            behavior: 'smooth'
+        });
+        document.querySelector(`.${target1.dataset.bsInfo}`).classList.remove('service-content');
+        console.log($fefc419833cc4da9$var$serviceSection);
+    });
+});
 // GSAP Animation for Navbar Brand
 (0, $fa00f704bb212b71$export$99ee26438460406a).to(".navbar-brand", {
     x: 0,
@@ -6492,6 +6525,21 @@ $fefc419833cc4da9$var$counters.forEach((counter)=>{
         duration: 1,
         delay: 1,
         ease: "power1.out"
+    });
+});
+// SPIN ANIMATION
+(0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.spin-on-hover').forEach((item)=>{
+    (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
+        scrollTrigger: {
+            trigger: item,
+            start: "top 80%",
+            toggleActions: "play none none reset"
+        },
+        rotation: 360,
+        duration: 1,
+        ease: "power1.out",
+        repeat: -1,
+        scrub: true
     });
 });
 
