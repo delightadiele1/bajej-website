@@ -20,6 +20,11 @@ mixin headings(text)
             .col-5
                 .line.border.border-1.rounded-pill.border-secondary.mt-2
 
+mixin chooseUs(head, body) 
+    p ✅ 
+        b #{head}: 
+        | #{body}
+
 block content 
 
     //  Page Header Start 
@@ -35,19 +40,29 @@ block content
     .container.page-section.py-6
         .row.g-4
             .col-lg-5.service__links-container
-                h1.display-5.mb-4.ps-2.py-2(style="border-left: 6px solid #f4d73c") Our 
-                    span.text-primary Services
-                .p-3(style="background-color: #eeedecff;")
-                    p.text-gray 
-                        b Bajej Oil & Gas LTD 
-                        | is highly specialized in key areas of the oil and gas industry, including but not limited to the following;
-                    ul.list-unstyled
-                        +service-list('Onshore Laying of Oil & Gas Pipeline, Pipeline Fabrication, Construction and Maintenance.', 'onshore__pipe-laying', 'active-service')
-                        +service-list('Pipeline Leak Repairs using Clamps, including Split-tee and Split Sleeve.', 'pipeLine__leak-repairs')
-                        +service-list('Valve Change out, installation and maintenance.', '2')
-                        +service-list('Manifold Upgrade, modification and maintenance.', '3')
-                        +service-list('Barrel assembly modification, Barrel Doors replacement and maintenance', '4')
-                        +service-list('Procurement of Oil & Gas Tools and Equipments.', '5')
+                .animate-from-left
+                    h1.display-5.mb-4.ps-2.py-2(style="border-left: 6px solid #f4d73c") Our 
+                        span.text-primary Services
+                    .p-3(style="background-color: #eeedecff;")
+                        p.text-gray.fs-5
+                            b Bajej Oil & Gas LTD 
+                            | is highly specialized in key areas of the oil and gas industry, including but not limited to the following;
+                        ul.list-unstyled
+                            +service-list('Onshore Laying of Oil & Gas Pipeline, Pipeline Fabrication, Construction and Maintenance.', 'onshore__pipe-laying', 'active-service')
+                            +service-list('Pipeline Leak Repairs using Clamps, including Split-tee and Split Sleeve.', 'pipeLine__leak-repairs')
+                            +service-list('Valve Change out, installation and maintenance.', 'valve__change-out')
+                            +service-list('Manifold Upgrade, modification and maintenance.', 'manifold__upgrade')
+                            +service-list('Barrel assembly modification, Barrel Doors replacement and maintenance', 'barrel__assembly')
+                            +service-list('Procurement of Oil & Gas Tools and Equipments.', 'procurement__tools-equipment')
+
+                .animate-from-down.text-gray.mt-5.p-3.bg-light.d-none.d-lg-block
+                    h1.display-5.fs-1 Why Choose Us?
+                    +chooseUs('Certified Experts', 'Highly skilled and certified pipeline engineers and technicians')
+                    +chooseUs('Safety First', 'Compliance with international HSE standards (ISO, OSHA, DPR regulations')
+                    +chooseUs('Proven Track Record', 'Successful delivery of multiple onshore pipeline projects across Nigeria')
+                    +chooseUs('Advanced Equipment', 'Modern tools and machinery for precision and efficiency')
+                    +chooseUs('Sustainability Focus', 'Minimal environmental footprint in all our operations')
+
 
             .col-lg-7.mt-5.mt-lg-4#service-section
                 //- Onshore laying of pipeline
@@ -58,7 +73,7 @@ block content
                     +headings('Onshore Laying of Oil & Gas Pipeline, Pipeline Fabrication, Construction and Maintenance')
                     .row.g-4.pt-4
                         h6.text-secondary.fs-4.mb-1(style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;") Onshore Pipeline services
-                        p.text-gray At 
+                        p.text-gray.fs-6 At 
                             b Bajej Oil & Gas LTD
                             | , we specialize in the onshore laying, fabrication, construction, and maintenance of oil and gas pipelines. With a commitment to safety, efficiency, and engineering excellence, we deliver end-to-end pipeline solutions that meet the highest industry standards.
 
@@ -68,9 +83,9 @@ block content
 
                     .row.g-4
                         .col-sm-6
-                            img.img-fluid(src="/img/IMG-20250716-WA0049.jpg", alt="Pipe Laying Image")
+                            img.img-fluid.fade-in(src="/img/IMG-20250716-WA0049.jpg", alt="Pipe Laying Image")
                         .col-sm-6
-                            img.img-fluid(src="/img/IMG-20250716-WA0070.jpg", alt="Pipe Laying Image")
+                            img.img-fluid.fade-in(src="/img/IMG-20250716-WA0070.jpg", alt="Pipe Laying Image")
 
                     .text-gray.py-4
                         p We provide professional onshore pipeline laying services for crude oil, natural gas, refined products, and water injection lines. Our capabilities include:
@@ -94,7 +109,7 @@ block content
                                 li Fabrication of manifolds, skids, and structural supports
 
                         .col-md-6 
-                            img.img-fluid(src="/img/IMG-20250716-WA0051.jpg", alt="Pipe Laying Image")
+                            img.img-fluid.fade-in(src="/img/IMG-20250716-WA0051.jpg", alt="Pipe Laying Image")
 
                 //- Clamps leak repair
                 //- 
@@ -104,7 +119,7 @@ block content
                 .pipeLine__leak-repairs.service-content.hide-content
                     +headings('Pipeline Leak Repairs using Clamps, including Split-tee and Split Sleeve')
                     .row.g-4.pt-4
-                        img.img-fluid(src="/img/IMG-20250716-WA0033.jpg", alt="Pipe Clamp Image")
+                        img.img-fluid.fade-out(src="/img/IMG-20250716-WA0033.jpg", alt="Pipe Clamp Image")
 
                     .row.g-4.pt-4
                         h6.text-secondary.fs-4.mb-1(style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;") Pipeline Leak Repairs
@@ -121,8 +136,8 @@ block content
                             p.text-gray 
                                 b Bajej Oil & Gas 
                                 | provides professional pipeline leak repair services utilizing engineered repair clamps for fast, safe, and reliable intervention on onshore pipelines. Our clamp-based solutions are ideal for immediate leak containment and long-term sealing across a variety of pipeline diameters and pressures.
-                        .col-sm-6
-                            img.img-fluid(src="/img/DSC00299.jpg", alt="Pipe Laying Image")
+                        .col-sm-6.animate-from-down
+                            img.img-fluid(src="/img/IMG-20250726-WA0018.jpg", alt="Pipe Laying Image")
 
                     
                         .col-sm-6.text-gray
@@ -146,7 +161,7 @@ block content
                     p.text-secondary.mb-4.fs-4 2. 
                         b  🔩 Split Tee Repairs 
 
-                    img.img-fluid(src="/img/IMG-20250327-WA0015.jpg")
+                    img.img-fluid.fade-in(src="/img/IMG-20250327-WA0015.jpg")
 
                     .row.g-4.text-gray.my-3
                         p 
@@ -183,4 +198,197 @@ block content
                                 li Weld defects
                                 li Minor ruptures
                         .col-sm-6
-                            img.img-fluid(src="/img/IMG-20240823-WA0011.jpg")
+                            img.img-fluid.fade-in(src="/img/IMG-20240823-WA0011.jpg")
+                //- 
+                //- 
+                //- 
+                .valve__change-out.service-content.hide-content
+                    +headings('Valve Change out, installation and maintenance.')
+                    .row.g-4.pt-4
+                        h6.text-secondary.fs-4.mb-1(style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;") Valve Change out
+                        p.text-gray
+                            b Bajej Oil & Gas LTD 
+                            | offers professional services in the installation, replacement, and maintenance of valves across a variety of oil and gas pipeline systems. Our experienced technicians and field engineers are equipped to handle everything from small-bore valve installations to critical valve change-outs on high-pressure lines.
+                        
+                        .row.g-4.text-gray.my-3
+                            .col-sm-6
+                                .row.g-4
+                                    .col-12
+                                         img.img-fluid.fade-in(src="/img/1000000444.jpg")
+                                    .col-12
+                                        p We support upstream, midstream, and downstream operators with reliable valve services that ensure safe operation, flow control efficiency, and regulatory compliance. Whether during shutdowns, facility upgrades, or emergency replacements, 
+                                            b Bajej 
+                                            | delivers with precision, speed, and a strong commitment to safety
+                            .col-sm-6
+                                img.img-fluid.img__height-sm.fade-in(src="/img/IMG-20250726-WA0009.jpg")
+                //- 
+                //- 
+                //- 
+                //- 
+                .manifold__upgrade.service-content.hide-content
+                    +headings('Manifold Upgrade, Maintenance & Modification')
+                    
+                    .row.g-4.pt-4
+                        h6.text-secondary.fs-4.mb-1(style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;") Manifold System Services
+                        p.text-gray 
+                            b Bajej Oil & Gas LTD 
+                            | provides expert services in the inspection, upgrade, modification, and routine maintenance of manifold systems across oil and gas installations. We ensure your production manifolds, test manifolds, and injection manifolds remain fully functional, safe, and optimized for performance.
+
+                    .row.g-4.align-items-center
+                        .col-md-6
+                            img.img-fluid.fade-in(src="/img/IMG-20250726-WA0021.jpg", alt="Manifold System Image")
+                        .col-md-6.text-gray
+                            p We handle all aspects of manifold servicing including component replacement, structural adjustments, and optimization for flow assurance and pressure balancing. Our services are tailored to extend asset lifespan and minimize production downtime.
+
+                    .row.g-4.mt-4.align-items-center
+                        .col-md-6.text-gray
+                            p 
+                                b Scope of Services:
+                            ul
+                                li Manifold system inspections and diagnostics
+                                li Upgrades and reconfiguration of flow paths
+                                li Valve and piping replacements within manifold units
+                                li Welding, painting, and corrosion protection
+                                li Pressure testing and commissioning
+
+                        .col-md-6
+                            img.img-fluid.fade-in(src="/img/IMG-20250726-WA0020.jpg", alt="Manifold Upgrade Work")
+
+                    .row.g-4.mt-4.align-items-center
+                        .col-md-6
+                            img.img-fluid.fade-in(src="/img/IMG-20250726-WA0022.jpg", alt="Manifold Maintenance")
+                        .col-md-6.text-gray
+                            p Our technicians work with precision and efficiency in both greenfield and brownfield environments, ensuring that manifolds are safely modified and aligned with operational goals. 
+                            p 
+                                b Bajej Oil & Gas 
+                                | remains a trusted partner for operators seeking high-integrity manifold support.
+
+                //- 
+                //- 
+                //- 
+                //- 
+                .barrel__assembly.service-content.hide-content
+                    +headings('Barrel Assembly Modification, Barrel Doors Replacement and Maintenance')
+
+                    .row.g-4.pt-4
+                        h6.text-secondary.fs-4.mb-1(style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;") Barrel Services
+                        p.text-gray
+                            b Bajej Oil & Gas LTD 
+                            | specializes in comprehensive barrel services for launcher and receiver systems, including barrel assembly modifications, barrel door replacements, and preventive maintenance. Our team ensures these critical pipeline components meet safety, operational, and integrity requirements.
+
+                    h6.display-5.fs-5.mb-4(style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;") Our Core Services;
+
+                    p.text-secondary.mb-4.fs-4 1. 
+                        b   Barrel Assembly Modification
+
+                    .row.g-4
+                        .col-md-6.text-gray
+                            p We offer in-site and workshop-based modifications of launcher/receiver barrels to meet operational upgrades or code compliance. Our services include:
+                            ul
+                                li Extension or resizing of barrels
+                                li Reinforcement and wall thickness upgrade
+                                li Custom nozzle and branch connections
+                                li Conversion for smart pigging capabilities
+                        .col-md-6
+                            img.img-fluid.fade-in(src="/img/IMG-20250716-WA0032.jpg", alt="Barrel Assembly Image")
+
+                    p.text-secondary.mb-4.fs-4 2. 
+                        b   Barrel Doors Replacement
+
+                    .row.g-4
+                        .col-md-6.text-gray
+                            p Bajej provides safe removal and installation of quick-opening closures (QOCs) and barrel doors on launchers and receivers. Whether during facility upgrades or scheduled maintenance, we ensure:
+                            ul
+                                li Compliance with ASME/PED pressure vessel codes
+                                li Proper sealing and locking mechanisms
+                                li Testing and certification
+                                li Minimal operational downtime
+                        .col-md-6
+                            img.img-fluid.fade-in(src="/img/IMG-20250716-WA0034.jpg", alt="Barrel Door Replacement Image")
+
+                    p.text-secondary.mb-4.fs-4 3. 
+                        b   Preventive Maintenance
+
+                    .row.g-4
+                        .col-md-6.text-gray
+                            p To ensure safe operations and extend the lifespan of your pipeline barrel systems, Bajej offers tailored maintenance programs. Our technicians inspect, clean, and service:
+                            ul
+                                li Sealing systems and O-rings
+                                li Locking mechanisms
+                                li Pressure integrity checks
+                                li External and internal corrosion checks
+                        .col-md-6
+                            img.img-fluid.fade-in(src="/img/IMG-20250716-WA0044.jpg", alt="Barrel Maintenance Image")
+
+                //- 
+                //- 
+                //- 
+                //- 
+
+                .procurement__tools-equipment.service-content.hide-content
+                    +headings('Procurement of Oil & Gas Tools and Equipment')
+                    
+                    .row.g-4.pt-4
+                        h6.text-secondary.fs-4.mb-1(style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;") Reliable Oilfield Procurement Solutions
+                        p.text-gray
+                            b Bajej Oil & Gas LTD 
+                            | offers end-to-end procurement services covering a broad spectrum of oilfield tools and equipment. Our partnerships with OEMs and certified distributors allow us to deliver quality, compliance, and cost-efficiency across every order.
+
+                    .row.row-cols-1.row-cols-sm-2.row-cols-md-3.g-4.py-3.text-gray
+                        .col
+                            .card.border-0.shadow-sm.h-100
+                                img.card-img-top(src="/img/IMG-20250726-WA0025.jpg", alt="Valves and Fittings")
+                                .card-body
+                                    h6.card-title.mb-1.fs-6.display-5 Valves & Fittings
+                                    p.card-text Precision valves, elbows, reducers, tees, and pipe connectors for high-pressure systems.
+
+                        .col
+                            .card.border-0.shadow-sm.h-100
+                                img.card-img-top(src="/img/IMG-20250726-WA0026.jpg", alt="Welding Tools")
+                                .card-body
+                                    h6.card-title.mb-1.fs-6.display-5 Welding Tools & Consumables
+                                    p.card-text Industrial-grade electrodes, TIG/MIG gear, rods, flux, and safety gear.
+
+                        .col
+                            .card.border-0.shadow-sm.h-100
+                                img.card-img-top(src="/img/IMG-20250726-WA0027.jpg", alt="Measuring Instruments")
+                                .card-body
+                                    h6.card-title.mb-1.fs-6.display-5 Flow Meters & Instrumentation
+                                    p.card-text Flow control, pressure gauges, temperature sensors, and calibration tools.
+
+                        .col
+                            .card.border-0.shadow-sm.h-100
+                                img.card-img-top(src="/img/IMG-20250726-WA0028.jpg", alt="Safety Equipment")
+                                .card-body
+                                    h6.card-title.mb-1.fs-6.display-5 Safety Equipment & PPE
+                                    p.card-text Fire-resistant clothing, helmets, gloves, goggles, gas detectors and more.
+
+                        .col
+                            .card.border-0.shadow-sm.h-100
+                                img.card-img-top(src="/img/IMG-20250726-WA0029.jpg", alt="Electrical and Mechanical Spares")
+                                .card-body
+                                    h6.card-title.mb-1.fs-6.display-5 Electrical & Mechanical Spares
+                                    p.card-text Motors, control panels, junction boxes, lighting, gaskets, seals, and drives.
+
+                        .col
+                            .card.border-0.shadow-sm.h-100
+                                img.card-img-top(src="/img/IMG-20250726-WA0030.jpg", alt="Lubricants and Coatings")
+                                .card-body
+                                    h6.card-title.mb-1.fs-6.display-5 Lubricants & Coatings
+                                    p.card-text Industrial-grade greases, rust-preventive coatings, sealants, and cleaning agents.
+
+                    .text-gray.mt-5
+                        p.fs-6 
+                            | We support procurement for greenfield and brownfield projects, shutdowns, and maintenance campaigns — ensuring timely delivery and compliance with local and international standards.
+
+
+
+
+
+        .animate-from-down.text-gray.mt-5.p-3.bg-light.d-lg-none
+            h1.display-5.fs-1 Why Choose Us?
+            +chooseUs('Certified Experts', 'Highly skilled and certified pipeline engineers and technicians')
+            +chooseUs('Safety First', 'Compliance with international HSE standards (ISO, OSHA, DPR regulations')
+            +chooseUs('Proven Track Record', 'Successful delivery of multiple onshore pipeline projects across Nigeria')
+            +chooseUs('Advanced Equipment', 'Modern tools and machinery for precision and efficiency')
+            +chooseUs('Sustainability Focus', 'Minimal environmental footprint in all our operations')

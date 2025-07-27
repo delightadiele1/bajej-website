@@ -317,16 +317,16 @@ gsap.utils.toArray('.animate-from-down').forEach(item => {
 });
 
 // fade in animation
-gsap.utils.toArray('fade-in').forEach(item => {
+gsap.utils.toArray('.fade-in').forEach(item => {
     gsap.to(item, {
         scrollTrigger: {
             trigger: item,
-            start: "top 80%",
+            start: "top 90%",
             toggleActions: "play none none reset"
         },
+        delay: 0.5,
         opacity: 1,
-        duration: 1,
-        delay: 1,
+        duration: 1.5,
         ease: "power1.out"
     }) 
 })

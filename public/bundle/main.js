@@ -6322,8 +6322,6 @@ $fefc419833cc4da9$var$serviceLinks.forEach(function(link) {
         $fefc419833cc4da9$var$serviceSection.scrollIntoView({
             behavior: 'smooth'
         });
-        document.querySelector(`.${target1.dataset.bsInfo}`).classList.remove('service-content');
-        console.log($fefc419833cc4da9$var$serviceSection);
     });
 });
 // GSAP Animation for Navbar Brand
@@ -6514,16 +6512,16 @@ $fefc419833cc4da9$var$counters.forEach((counter)=>{
     });
 });
 // fade in animation
-(0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('fade-in').forEach((item)=>{
+(0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.fade-in').forEach((item)=>{
     (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
         scrollTrigger: {
             trigger: item,
-            start: "top 80%",
+            start: "top 90%",
             toggleActions: "play none none reset"
         },
+        delay: 0.5,
         opacity: 1,
-        duration: 1,
-        delay: 1,
+        duration: 1.5,
         ease: "power1.out"
     });
 });

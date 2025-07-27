@@ -352,11 +352,10 @@
 .about__us-text {
   color: #236b3a;
   font-size: 1.5rem;
-  position: relative;
-  width:50%;
-  margin-left:auto;
+  /* position: relative;
   white-space: nowrap;
-  animation: slide 10s linear infinite;
+  animation: slide 10s linear infinite; */
+  text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.5)
 }
 
 /* services */
@@ -375,18 +374,6 @@
   transition: all 0.5s ease;
 } */
 
-@keyframes slide {
-  0% {
-    left: -50%;
-  }
-  100% {
-    left: 50%;
-  }
-}
-
-.about__us-text {
-  text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.5);
-}
 
 .mission-background {
   background-image: url('/img/IMG-20250716-WA0007.jpg');
@@ -475,6 +462,10 @@
     font-size: 18px;
     font-weight: 500 !important;
   }
+
+  .fs-5 {
+    font-size: 16px !important
+  }
 }
 
 @media (max-width: 768px) {
@@ -521,6 +512,11 @@
   /* project */
   .p-title {
     font-size: 0.9rem !important;
+  }
+
+  .img__height-sm {
+    width: 100%;
+    height: 28rem
   }
 
 }
