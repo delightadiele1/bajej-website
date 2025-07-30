@@ -1,0 +1,43 @@
+extends base
+
+block content 
+    //  Page Header Start 
+    .container-fluid.contact__page-header.page__header
+        h1.display-5.text-primary.mb-3.about-text Contact Us 
+            i.fa.fa-phone.fa-2x.text-primary.mb-4
+        .d-inline-flex.text-primary.fade-out
+            h6.m-0
+                a.text-white(href="/") Home &gt;&gt;
+                h6.text-white.m-0.px-3 /
+            h6.text-primary.m-0 Contact
+
+    .mission-background
+        .container.py-5.py-sm-6
+            .mb-5(style='max-width: 600px;')
+                h1.display-5.mb-4.ps-2.py-2(style="border-left: 6px solid #f4d73c")
+                    | Please 
+                    span.text-primary Feel Free
+                    |  To Contact Us
+            .row.gx-0.align-items-center
+                .col-lg-6.mb-5.mb-lg-0(style='height: 600px;')
+                    iframe.w-100.h-100(src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7950.8467329364!2d7.07206434434502!3d4.868519013929378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1753648379875!5m2!1sen!2sng' frameborder='0' style='border:0;' allowfullscreen aria-hidden='false' tabindex='0' loading="lazy" referrerpolicy="no-referrer-when-downgrade")
+                .col-lg-6
+                    .contact-form.bg-light.p-5
+                        form#form-contact(action='https://formspree.io/f/xblkyloj' method='POST').row.g-3
+                            .col-12.col-sm-6
+                                input.form-control.border-0(type='text' placeholder='Your Name' style='height: 55px;' name='name' required)
+                            .col-12.col-sm-6
+                                input.form-control.border-0(type='email' placeholder='Your Email' style='height: 55px;' name='email' required)
+                            .col-12
+                                input.form-control.border-0(type='text' placeholder='Subject' style='height: 55px;' name='subject' required)
+                            .col-12
+                                textarea.form-control.border-0(rows='4' placeholder='Message' name='message' required)
+                            .col-12
+                                button.btn.btn-primary.w-100.py-3(type='submit') Send Message
+                        
+                        #form-success.alert.alert-success.d-none
+                            | ✅ Your message has been sent successfully!
+                        
+                        #form-error.alert.alert-danger.d-none
+                            | ❌ Something went wrong. Please try again later.
+            //  Contact End 

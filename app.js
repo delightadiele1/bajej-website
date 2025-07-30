@@ -30,9 +30,22 @@ app.get('/services', (req, res) => {
   });
 })
 
+app.get('/contact', (req, res) => {
+  res.status(200).render('contact', {
+    title: 'Contact'
+  })
+})
+
+app.get('/projects', (req, res) => {
+  res.status(200).render('projects', {
+    title: 'Projects'
+  })
+})
+
 app.use((req, res) => {
   res.status(404).render('error');
 });
+
 
 module.exports = app;
 

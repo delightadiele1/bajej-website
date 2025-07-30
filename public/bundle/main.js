@@ -6294,9 +6294,41 @@ $2215997bc8312f01$var$_getGSAP() && $2215997bc8312f01$var$gsap.registerPlugin($2
     });
 })(jQuery);
 // JS code
+// Services
 const $fefc419833cc4da9$var$serviceLinks = document.querySelectorAll('.service-links');
 const $fefc419833cc4da9$var$serviceContent = document.querySelectorAll('.service-content');
 const $fefc419833cc4da9$var$serviceSection = document.querySelector('#service-section');
+document.addEventListener('DOMContentLoaded', function() {
+    const formSuccess = document.getElementById('form-success');
+    const formError = document.getElementById('form-error');
+    const formContact = document.getElementById('form-contact');
+    const requestForm = document.getElementById('request-form');
+    console.log(requestForm);
+    const handleContactFormSubmit = async function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        try {
+            const res = await fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    Accept: 'application/json'
+                }
+            });
+            if (res.ok) {
+                formError.classList.add('d-none');
+                formSuccess.classList.remove('d-none');
+                form.reset();
+            } else throw new error('Form Submission Failed');
+        } catch  {
+            formError.classList.remove('d-none');
+            formSuccess.classList.add('d-none');
+        }
+    };
+    if (formContact) formContact.addEventListener('submit', handleContactFormSubmit);
+    if (requestForm) requestForm.addEventListener('submit', handleContactFormSubmit);
+});
 const $fefc419833cc4da9$var$clearActiveService = function() {
     console.log("executed");
     $fefc419833cc4da9$var$serviceLinks.forEach(function(link) {
@@ -6321,6 +6353,45 @@ $fefc419833cc4da9$var$serviceLinks.forEach(function(link) {
         document.querySelector(`.${target1.dataset.bsInfo}`).classList.remove('hide-content');
         $fefc419833cc4da9$var$serviceSection.scrollIntoView({
             behavior: 'smooth'
+        });
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    // Projects
+    const projects = document.querySelectorAll('.projects');
+    const pages = document.querySelectorAll('.page-links');
+    const projectSection = document.querySelector('.project-section');
+    const leftArrow = document.querySelector('.left');
+    const rightArrow = document.querySelector('.right');
+    let count = 1;
+    const clearActivePages = function() {
+        pages.forEach((page)=>{
+            page.querySelector('span').classList.remove('active-service');
+        });
+    };
+    const hideProjects = function() {
+        projects.forEach((project)=>{
+            project.classList.add('hide-content');
+        });
+    };
+    pages.forEach((page)=>{
+        page.addEventListener('click', (e)=>{
+            e.preventDefault();
+            clearActivePages();
+            hideProjects();
+            const pageInfo = e.currentTarget.dataset.bsPage;
+            if (pageInfo === 'left') count = count - 1;
+            if (pageInfo === 'right') count = count + 1;
+            if (pageInfo !== 'left' && pageInfo !== 'right') count = pageInfo.split('-')[1] * 1;
+            count > 1 ? leftArrow.classList.remove('hide-content') : leftArrow.classList.add('hide-content');
+            count < 6 ? rightArrow.classList.remove('hide-content') : rightArrow.classList.add('hide-content');
+            document.querySelector(`.page-${count} span`).classList.add('active-service');
+            document.querySelector(`.project-${count}`).classList.remove('hide-content');
+            projectSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+            console.log(pageInfo);
+            console.log(count);
         });
     });
 });

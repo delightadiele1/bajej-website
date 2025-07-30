@@ -28,7 +28,7 @@ mixin chooseUs(head, body)
 block content 
 
     //  Page Header Start 
-    .container-fluid.about__page-header
+    .container-fluid.about__page-header.page__header
         h1.display-5.text-primary.mb-3.about-text Our Services
             i.fa.fa-tools.fa-2x.text-primary.mb-4
         .d-inline-flex.text-primary.fade-out
@@ -72,7 +72,8 @@ block content
                 .onshore__pipe-laying.service-content
                     +headings('Onshore Laying of Oil & Gas Pipeline, Pipeline Fabrication, Construction and Maintenance')
                     .row.g-4.pt-4
-                        h6.text-secondary.fs-4.mb-1(style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;") Onshore Pipeline services
+                        h6.text-secondary.fs-4.mb-1(style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;") 
+                            b Onshore Pipeline services
                         p.text-gray.fs-6 At 
                             b Bajej Oil & Gas LTD
                             | , we specialize in the onshore laying, fabrication, construction, and maintenance of oil and gas pipelines. With a commitment to safety, efficiency, and engineering excellence, we deliver end-to-end pipeline solutions that meet the highest industry standards.

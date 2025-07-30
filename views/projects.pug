@@ -1,0 +1,79 @@
+extends base
+
+mixin projects-title(text, location)
+    .project-title
+        h2.fs-3.text-center.display-5(style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;") #{text}.
+        .row.g-4 
+            .col-8.fs-5
+                i.fa.fa-map-marker-alt.text-primary 
+                    span.text-gray #{location}
+        .row 
+            .col-5
+                .line.border.border-1.rounded-pill.border-secondary.mt-2
+            .col-2.text-center.p-0
+                i.fa.fa-cog.text-primary.fs-3.spin-on-hover
+            .col-5
+                .line.border.border-1.rounded-pill.border-secondary.mt-2
+
+mixin images(imgs)
+    each img in imgs
+        .col-sm-6.col-md-4.portfolio-item.first.mb-4
+            .position-relative.portfolio-box
+                img.img-fluid.w-100(src=`/img/${img}`, alt="Project image")
+                a.portfolio-btn(href=`/img/${img}`, data-lightbox="portfolio")
+                    i.bi.bi-plus.text-white
+
+mixin projects(num, title, location, display='', imgArr)
+    .container.pt-3.pb-0.pt-sm-5.projects(id=`project-${num}` class=`${display} project-${num}`)
+        +projects-title(`${title}`, `${location}`)
+        .row.g-4.pt-4
+            +images(imgArr)
+
+mixin pages(page, status='')
+    a.page-links(href=`#project-${page}` data-bs-page=`project-${page}` class=`page-${page}`)
+        span.py-1.px-2.py-sm-2.px-sm-3.border.border-1.text-gray.border-secondary( class=`${status}`) #{page}  
+
+
+
+block content 
+    .container-fluid.project__page-header.page__header
+        h1.display-5.text-primary.mb-3.about-text Our Projects 
+            i.fa.fa-hard-hat.fa-2x.text-primary.mb-4
+        .d-inline-flex.text-primary.fade-out
+            h6.m-0
+                a.text-white(href="/") Home &gt;&gt;
+                h6.text-white.m-0.px-3 /
+            h6.text-primary.m-0 Projects
+
+    .project-section
+        +projects(1, '14" Post IP Defect Repair by Sectional Replacement', 'Ikarama Bayelsa, Nigeria', 'block', ['IMG-20250426-WA0105.jpg', 'IMG-20250426-WA0060.jpg', 'IMG-20250426-WA0054.jpg', 'IMG-20250426-WA0066.jpg', 'IMG-20250426-WA0059.jpg', 'IMG-20250426-WA0003.jpg', 'IMG-20250426-WA0050.jpg', 'IMG-20250502-WA0003.jpg', 'IMG-20250426-WA0111.jpg'])
+
+        +projects(2, '28" Post IP Defect Repair by In-Service Welding; Split Tee Instalation', 'Elelenwo Rivers, Nigeria', 'hide-content', ['IMG-20250426-WA0105.jpg', 'IMG-20250426-WA0060.jpg', 'IMG-20250426-WA0054.jpg', 'IMG-20250426-WA0066.jpg', 'IMG-20250426-WA0059.jpg', 'IMG-20250426-WA0003.jpg', 'IMG-20250426-WA0050.jpg', 'IMG-20250502-WA0003.jpg', 'IMG-20250426-WA0111.jpg'])
+
+        +projects(3, 'Jiv/Repair By Clamping on th 16" Egbema to Assa TL', 'Egbema Imo, Nigeria', 'hide-content', ['IMG-20250426-WA0105.jpg', 'IMG-20250426-WA0060.jpg', 'IMG-20250426-WA0054.jpg', 'IMG-20250426-WA0066.jpg', 'IMG-20250426-WA0059.jpg', 'IMG-20250426-WA0003.jpg', 'IMG-20250426-WA0050.jpg', 'IMG-20250502-WA0003.jpg', 'IMG-20250426-WA0111.jpg'])
+
+        +projects(4, 'Jiv/Repair By Clamping on th 16" Egbema to Assa TL', 'Egbema Imo, Nigeria', 'hide-content', ['IMG-20250426-WA0105.jpg', 'IMG-20250426-WA0060.jpg', 'IMG-20250426-WA0054.jpg', 'IMG-20250426-WA0066.jpg', 'IMG-20250426-WA0059.jpg', 'IMG-20250426-WA0003.jpg', 'IMG-20250426-WA0050.jpg', 'IMG-20250502-WA0003.jpg', 'IMG-20250426-WA0111.jpg'])
+
+        +projects(5, 'Jiv/Repair By Clamping on th 16" Egbema to Assa TL', 'Egbema Imo, Nigeria', 'hide-content', ['IMG-20250426-WA0105.jpg', 'IMG-20250426-WA0060.jpg', 'IMG-20250426-WA0054.jpg', 'IMG-20250426-WA0066.jpg', 'IMG-20250426-WA0059.jpg', 'IMG-20250426-WA0003.jpg', 'IMG-20250426-WA0050.jpg', 'IMG-20250502-WA0003.jpg', 'IMG-20250426-WA0111.jpg'])
+
+        +projects(6, 'Jiv/Repair By Clamping on th 16" Egbema to Assa TL', 'Egbema Imo, Nigeria', 'hide-content', ['IMG-20250426-WA0105.jpg', 'IMG-20250426-WA0060.jpg', 'IMG-20250426-WA0054.jpg', 'IMG-20250426-WA0066.jpg', 'IMG-20250426-WA0059.jpg', 'IMG-20250426-WA0003.jpg', 'IMG-20250426-WA0050.jpg', 'IMG-20250502-WA0003.jpg', 'IMG-20250426-WA0111.jpg'])
+
+        
+
+    .pages-button.py-2.mb-5.text-center
+        a.left(href=`#project-${page}` data-bs-page=`left`).page-links.hide-content
+            span.py-1.px-2.py-sm-2.px-sm-3.border.border-1.text-gray.border-secondary 
+                i.fa.fa-angle-left
+
+            +pages(1, 'active-service')
+            +pages(2)
+            +pages(3)
+            +pages(4)
+            +pages(5)
+            +pages(6)
+            
+       
+        a.right(href=`#project-${page}` data-bs-page=`right`).page-links
+            span.py-1.px-2.py-sm-2.px-sm-3.border.border-1.text-gray.border-secondary 
+                i.fa.fa-angle-right
+            
