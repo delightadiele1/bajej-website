@@ -6294,6 +6294,40 @@ $2215997bc8312f01$var$_getGSAP() && $2215997bc8312f01$var$gsap.registerPlugin($2
     });
 })(jQuery);
 // JS code
+const $fefc419833cc4da9$var$loader = document.getElementById("loader");
+const $fefc419833cc4da9$var$fill = document.querySelector(".loader-fill");
+const $fefc419833cc4da9$var$percentText = document.querySelector(".loader-percent");
+let $fefc419833cc4da9$var$startTime = performance.now();
+function $fefc419833cc4da9$var$animateProgress() {
+    const now = performance.now();
+    const elapsed = now - $fefc419833cc4da9$var$startTime;
+    const estimatedLoadTime = 4000; // Adjust if needed
+    let progress = Math.min(elapsed / estimatedLoadTime, 1);
+    let percent = Math.floor(progress * 100);
+    $fefc419833cc4da9$var$fill.style.height = `${percent}%`;
+    $fefc419833cc4da9$var$percentText.textContent = `${percent}%`;
+    if (progress < 1) requestAnimationFrame($fefc419833cc4da9$var$animateProgress);
+}
+$fefc419833cc4da9$var$animateProgress();
+// When page actually finishes loading
+window.addEventListener("load", ()=>{
+    const actualLoadTime = performance.now() - $fefc419833cc4da9$var$startTime;
+    // Fill to 100% smoothly based on remaining %
+    $fefc419833cc4da9$var$fill.style.transition = `height ${actualLoadTime * 0.2}ms ease`;
+    $fefc419833cc4da9$var$fill.style.height = `100%`;
+    $fefc419833cc4da9$var$percentText.textContent = `100%`;
+    // Fade out
+    $fefc419833cc4da9$var$loader.style.transition = "opacity 0.5s ease";
+    $fefc419833cc4da9$var$loader.style.opacity = "0";
+    setTimeout(()=>{
+        $fefc419833cc4da9$var$loader.style.display = "none";
+        const pageContent = document.getElementById("page-content");
+        if (pageContent) {
+            pageContent.style.display = "block";
+            pageContent.style.opacity = 1;
+        }
+    }, 500);
+});
 // Services
 const $fefc419833cc4da9$var$serviceLinks = document.querySelectorAll('.service-links');
 const $fefc419833cc4da9$var$serviceContent = document.querySelectorAll('.service-content');

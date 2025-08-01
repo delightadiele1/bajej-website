@@ -68,6 +68,56 @@
 
 // JS code
 
+const loader = document.getElementById("loader");
+const fill = document.querySelector(".loader-fill");
+const percentText = document.querySelector(".loader-percent");
+
+let startTime = performance.now();
+
+function animateProgress() {
+  const now = performance.now();
+  const elapsed = now - startTime;
+
+  const estimatedLoadTime = 4000; // Adjust if needed
+
+  let progress = Math.min(elapsed / estimatedLoadTime, 1);
+  let percent = Math.floor(progress * 100);
+
+  fill.style.height = `${percent}%`;
+  percentText.textContent = `${percent}%`;
+
+  if (progress < 1) {
+    requestAnimationFrame(animateProgress);
+  }
+}
+
+animateProgress();
+
+// When page actually finishes loading
+window.addEventListener("load", () => {
+  const actualLoadTime = performance.now() - startTime;
+
+  // Fill to 100% smoothly based on remaining %
+  fill.style.transition = `height ${actualLoadTime * 0.2}ms ease`;
+  fill.style.height = `100%`;
+  percentText.textContent = `100%`;
+
+  // Fade out
+  loader.style.transition = "opacity 0.5s ease";
+  loader.style.opacity = "0";
+
+  setTimeout(() => {
+    loader.style.display = "none";
+
+     const pageContent = document.getElementById("page-content");
+    if (pageContent) {
+      pageContent.style.display = "block";
+      pageContent.style.opacity = 1
+    }
+  }, 500);
+});
+
+
 // Services
 const serviceLinks = document.querySelectorAll('.service-links')
 const serviceContent = document.querySelectorAll('.service-content')
