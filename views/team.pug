@@ -1,0 +1,104 @@
+extends base
+
+mixin team(img, lname, fname, role)
+    .col-12.col-sm-6.col-md-4.col-lg-3.text-center
+        .team-img
+            img.w-75.h-75.fade-in.border.rounded-circle.border-secondary(src=`${img}` style="object-fit: cover;")
+        .team-intro.py-4 
+            h6.text-gray.display-5.fs-5 #{lname}
+                br 
+                | #{fname} 
+            p.text-primary 
+                b #{role} 
+
+block content
+
+    //  Page Header Start 
+    .container-fluid.team__page-header.page__header
+        h1.display-5.text-primary.mb-3.about-text The Team 
+            i.fa.fa-users.fa-2x.text-primary.mb-4
+        .d-inline-flex.text-primary.fade-out
+            h6.m-0
+                a.text-white(href="/") Home &gt;&gt;
+                h6.text-white.m-0.px-3 /
+            h6.text-primary.m-0 Team
+    //  Page Header Start 
+    .container.pt-5.pb-3
+        .animate-from-down
+            h1.display-5.mb-4.ps-2.py-2(style="border-left: 6px solid #f4d73c") Meet the  
+                span.text-primary Team
+
+    .container.management
+        .row.g-5
+            .col-lg-4.col-md-6.mx-auto.animate-from-down
+                .row.g-0
+                    .col-12(style="min-height: 300px;")
+                        .flip-card
+                            .flip__card-inner
+                                .flip__card-front
+                                    img.w-100.h-100(src="/img/IMG-20250716-WA0071.jpg", style="object-fit: cover;")
+                                .flip__card-back.p-3 
+                                    h4.text-white Dr Benson Igboejesi
+                                    p.text-small.text-white(style='font-size: 1rem') CEO & OWNER
+                                    p(style='font-size: 0.7rem') Holds first class B.Com, and M.Com, degrees in Accounting & Auditing, and a Ph.D. in Finance & Banking – all from the University of Pune, India. The degrees were obtained in 1985, 1988 and 1991 respectively. Among other brilliant qualifications and training, he has a Diploma in computer applications. He was a recipient of the Commonwealth Scholarship for his Ph.D. degree program.
+
+                                    p(style='font-size: 0.7rem') After his National Youth Service in April 1993, he immediately took up appointment as a Credit Officer in the former ABC Merchant Bank Limited, where he rose to Head the departments of Administration/Human Resources/Corporate Planning. In February 1998, he moved his career to one of the major indigenous oil & gas companies – Baywood Continental Limited as Manager Finance & Administration. 
+                                        br 
+                                        | In May 2000, he was assigned more challenging responsibilities to co-ordinate all branch finance and admin functions, and in August 1, 2002 he was elevated to the position of AGM - Assistant General Manager - Finance/Accounts/Administration.
+                                    p.text-small.text-white(style='font-size: 1rem') PROJECT EXPERIENCE
+                                    p(style='font-size: 0.7rem')
+
+                    .col-12
+                        .bg-light.p-4
+                            h4.text-uppercase.sub-title dr benson igboejesi
+                            span.text-gray CEO &amp; Founder
+
+            .col-lg-4.col-md-6.mx-auto.animate-from-down
+                .row.g-0
+                    .col-12(style="min-height: 300px;")
+                        .flip-card
+                            .flip__card-inner
+                                .flip__card-front
+                                    img.w-100.h-100(src="/img/IMG-20250716-WA0072.jpg", style="object-fit: cover;")
+                                .flip__card-back This is Igboejesi prince
+
+                    .col-12
+                        .bg-light.p-4
+                            h4.text-uppercase.sub-title igboejesi prince
+                            span.text-gray Project Manager 
+
+            .col-lg-4.col-md-6.mx-auto.animate-from-down
+                .row.g-0
+                    .col-12(style="min-height: 300px;")
+                        .flip-card
+                            .flip__card-inner
+                                .flip__card-front
+                                    img.w-100.h-100(src="/img/IMG-20250716-WA0073.jpg", style="object-fit: cover;")
+                                .flip__card-back This is Ewa joseph
+
+                    .col-12
+                        .bg-light.p-4
+                            h4.text-uppercase.sub-title ewa joseph
+                            span.text-gray Operations / logistics manager
+
+        .animate-from-top.my-5
+            h1.display-5.ps-2.py-2.fs-4(style="border-left: 6px solid #f4d73c") Team  
+                span.text-primary Members
+        .row.g-5
+            +team('/img/IMG-20250716-WA0073.jpg', 'Anyanwu', 'Emmanuel', 'Project Engineer')
+            +team('/img/IMG-20250716-WA0073.jpg', 'Chukwumuanya', 'Timothy', 'Lead Fitter')
+            +team('/img/IMG-20250716-WA0073.jpg', 'Okoro', 'Francis', 'H.S.E Supervisor')
+            +team('/img/IMG-20250716-WA0073.jpg', 'Ukandu', 'Ogechi', 'Occupational & Health Nurse')
+            +team('/img/IMG-20250716-WA0073.jpg', 'Mbagu', 'Emmanuel', 'Rigger')
+            +team('/img/IMG-20250716-WA0073.jpg', 'Manuagwu', 'Mike', 'Assistant Fitter')
+            +team('/img/IMG-20250716-WA0073.jpg', 'Okoro', 'Precious', 'Fitter')
+            +team('/img/IMG-20250716-WA0073.jpg', 'Deegbara', 'Fortune', 'Head Driver')
+            +team('/img/IMG-20250716-WA0073.jpg', 'Uche', 'Doe', 'Excavator Operator 1')
+            +team('/img/IMG-20250716-WA0073.jpg', 'Onyemetu', 'Stanley', 'Excavator Operator 2')
+            +team('/img/IMG-20250716-WA0073.jpg', 'Chisom', 'Agor', 'Excavator Operator 3')
+            +team('/img/IMG-20250716-WA0073.jpg', 'Ejike', 'Akomas', 'Excavator Operator 4')
+            +team('/img/IMG-20250716-WA0073.jpg', 'Bright', 'Doe', 'Swamp Buggy Operator 1')
+            +team('/img/IMG-20250716-WA0073.jpg', 'John', 'Doe', 'Swamp Buggy Operator 2')
+            +team('/img/IMG-20250716-WA0073.jpg', 'Ifeanyi', 'Doe', 'Self-loader Driver')
+            +team('/img/IMG-20250716-WA0073.jpg', 'Bright', 'Doe', 'Low-bed Driver')
+            

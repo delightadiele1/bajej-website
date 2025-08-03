@@ -42,10 +42,15 @@ app.get('/projects', (req, res) => {
   })
 })
 
+app.get('/team', (req, res) => {
+  res.status(200).render('team', {
+    title: 'Team'
+  })
+})
+
 app.use((req, res) => {
   res.status(404).render('error');
 });
-
 
 module.exports = app;
 
