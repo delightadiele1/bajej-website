@@ -76,4 +76,11 @@ block content
         a.right(href=`#project-${page}` data-bs-page=`right`).page-links
             span.py-1.px-2.py-sm-2.px-sm-3.border.border-1.text-gray.border-secondary 
                 i.fa.fa-angle-right
-            
+    
+    .project-count.text-center.my-5
+      h1.display-2.text-uppercase.mb-4.fs-1
+        span.counter(data-target='80') 0
+        |+
+      p.fs-5.text-dark.animate-from-left
+        b Total Projects Completed
+      a.btn.btn-primary.py-3.px-4.animate-from-down(href="/projects") View Projects

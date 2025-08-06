@@ -6293,18 +6293,6 @@ $2215997bc8312f01$var$_getGSAP() && $2215997bc8312f01$var$gsap.registerPlugin($2
         loop: true
     });
 })(jQuery);
-// JS code
-// const loader = document.getElementById('loader')
-// document.addEventListener('load', function() {
-//     loader.style.opacity = '0'
-//     setTimeout(() => {
-//         loader.style.display = 'none'
-//         pageContent = document.getElementById('page-content')
-//         if (pageContent) {
-//             pageContent.style.display = 'block'
-//         }
-//     }, 1000)
-// })
 // Services
 const $fefc419833cc4da9$var$serviceLinks = document.querySelectorAll('.service-links');
 const $fefc419833cc4da9$var$serviceContent = document.querySelectorAll('.service-content');

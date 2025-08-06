@@ -39,38 +39,42 @@ block content
     //  Page Header Start 
     .container.page-section.py-6
         .row.g-4
-            .col-lg-5.service__links-container
-                .animate-from-left
-                    h1.display-5.mb-4.ps-2.py-2(style="border-left: 6px solid #f4d73c") Our 
-                        span.text-primary Services
-                    .p-3(style="background-color: #eeedecff;")
-                        p.text-gray.fs-5
-                            b Bajej Oil & Gas LTD 
-                            | is highly specialized in key areas of the oil and gas industry, including but not limited to the following;
-                        ul.list-unstyled
-                            +service-list('Onshore Laying of Oil & Gas Pipeline, Pipeline Fabrication, Construction and Maintenance.', 'onshore__pipe-laying', 'active-service')
-                            +service-list('Pipeline Leak Repairs using Clamps, including Split-tee and Split Sleeve.', 'pipeLine__leak-repairs')
-                            +service-list('Valve Change out, installation and maintenance.', 'valve__change-out')
-                            +service-list('Manifold Upgrade, modification and maintenance.', 'manifold__upgrade')
-                            +service-list('Barrel assembly modification, Barrel Doors replacement and maintenance', 'barrel__assembly')
-                            +service-list('Procurement of Oil & Gas Tools and Equipments.', 'procurement__tools-equipment')
+            .col-lg-5.service__links-container.short-content.position-relative
+                .sticky-content.sticky
+                    .top-marker
+                    .animate-from-left
+                        h1.display-5.mb-4.ps-2.py-2(style="border-left: 6px solid #f4d73c") Our 
+                            span.text-primary Services
+                        .p-3(style="background-color: #eeedecff;")
+                            p.text-gray.fs-5
+                                b Bajej Oil & Gas LTD 
+                                | is highly specialized in key areas of the oil and gas industry, including but not limited to the following;
+                            ul.list-unstyled
+                                +service-list('Onshore Laying of Oil & Gas Pipeline, Pipeline Fabrication, Construction and Maintenance.', 'onshore__pipe-laying', 'active-service')
+                                +service-list('Pipeline Leak Repairs using Clamps, including Split-tee and Split Sleeve.', 'pipeLine__leak-repairs')
+                                +service-list('Valve Change out, installation and maintenance.', 'valve__change-out')
+                                +service-list('Manifold Upgrade, modification and maintenance.', 'manifold__upgrade')
+                                +service-list('Barrel assembly modification, Barrel Doors replacement and maintenance', 'barrel__assembly')
+                                +service-list('Procurement of Oil & Gas Tools and Equipments.', 'procurement__tools-equipment')
 
-                .animate-from-down.text-gray.mt-5.p-3.bg-light.d-none.d-lg-block
-                    h1.display-5.fs-1 Why Choose Us?
-                    +chooseUs('Certified Experts', 'Highly skilled and certified pipeline engineers and technicians')
-                    +chooseUs('Safety First', 'Compliance with international HSE standards (ISO, OSHA, DPR regulations')
-                    +chooseUs('Proven Track Record', 'Successful delivery of multiple onshore pipeline projects across Nigeria')
-                    +chooseUs('Advanced Equipment', 'Modern tools and machinery for precision and efficiency')
-                    +chooseUs('Sustainability Focus', 'Minimal environmental footprint in all our operations')
+                    .animate-from-down.text-gray.mt-5.p-3.bg-light.d-none.d-lg-block.second
+                        h1.display-5.fs-1 Why Choose Us?
+                        +chooseUs('Certified Experts', 'Highly skilled and certified pipeline engineers and technicians')
+                        +chooseUs('Safety First', 'Compliance with international HSE standards (ISO, OSHA, DPR regulations')
+                        +chooseUs('Proven Track Record', 'Successful delivery of multiple onshore pipeline projects across Nigeria')
+                        +chooseUs('Advanced Equipment', 'Modern tools and machinery for precision and efficiency')
+                        +chooseUs('Sustainability Focus', 'Minimal environmental footprint in all our operations')
+                    .bottom-marker
 
 
-            .col-lg-7.mt-5.mt-lg-4#service-section
+            .col-lg-7.mt-5.mt-lg-4#service-section.long-content
                 //- Onshore laying of pipeline
                 //- 
                 //- 
                 //-
+                .top2-marker
                 .onshore__pipe-laying.service-content
-                    +headings('Onshore Laying of Oil & Gas Pipeline, Pipeline Fabrication, Construction and Maintenance')
+                    +headings('Onshore Laying of Oil & Gas Pipeline, Pipeline Fabrication, Construction and Maintenance') 
                     .row.g-4.pt-4
                         h6.text-secondary.fs-4.mb-1(style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;") 
                             b Onshore Pipeline services
@@ -203,7 +207,7 @@ block content
                 //- 
                 //- 
                 //- 
-                .valve__change-out.service-content.hide-content
+                .valve__change-out.service-content.hide-content.sticky
                     +headings('Valve Change out, installation and maintenance.')
                     .row.g-4.pt-4
                         h6.text-secondary.fs-4.mb-1(style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;") Valve Change out
@@ -215,7 +219,7 @@ block content
                             .col-sm-6
                                 .row.g-4
                                     .col-12
-                                         img.img-fluid.fade-in(src="/img/1000000444.jpg")
+                                        img.img-fluid.fade-in(src="/img/1000000444.jpg")
                                     .col-12
                                         p We support upstream, midstream, and downstream operators with reliable valve services that ensure safe operation, flow control efficiency, and regulatory compliance. Whether during shutdowns, facility upgrades, or emergency replacements, 
                                             b Bajej 
@@ -338,39 +342,38 @@ block content
                     .row.row-cols-1.row-cols-sm-2.row-cols-md-3.g-4.py-3.text-gray
                         .col
                             .card.border-0.shadow-sm.h-100
-                                img.card-img-top(src="/img/IMG-20250726-WA0025.jpg", alt="Valves and Fittings")
+                                img.card-img-top(src="/img/valves.jfif", alt="Valves and Fittings")
                                 .card-body
                                     h6.card-title.mb-1.fs-6.display-5 Valves & Fittings
                                     p.card-text Precision valves, elbows, reducers, tees, and pipe connectors for high-pressure systems.
 
                         .col
                             .card.border-0.shadow-sm.h-100
-                                img.card-img-top(src="/img/IMG-20250726-WA0026.jpg", alt="Welding Tools")
+                                img.card-img-top(src="/img/weld.webp", alt="Welding Tools")
                                 .card-body
                                     h6.card-title.mb-1.fs-6.display-5 Welding Tools & Consumables
                                     p.card-text Industrial-grade electrodes, TIG/MIG gear, rods, flux, and safety gear.
 
                         .col
                             .card.border-0.shadow-sm.h-100
-                                img.card-img-top(src="/img/IMG-20250726-WA0027.jpg", alt="Measuring Instruments")
+                                img.card-img-top(src="/img/IMG-20250726-WA0025.jpg", alt="Measuring Instruments")
                                 .card-body
                                     h6.card-title.mb-1.fs-6.display-5 Flow Meters & Instrumentation
                                     p.card-text Flow control, pressure gauges, temperature sensors, and calibration tools.
 
                         .col
                             .card.border-0.shadow-sm.h-100
-                                img.card-img-top(src="/img/IMG-20250726-WA0028.jpg", alt="Safety Equipment")
+                                img.card-img-top(src="/img/safety.jpg", alt="Safety Equipment")
                                 .card-body
                                     h6.card-title.mb-1.fs-6.display-5 Safety Equipment & PPE
                                     p.card-text Fire-resistant clothing, helmets, gloves, goggles, gas detectors and more.
 
                         .col
                             .card.border-0.shadow-sm.h-100
-                                img.card-img-top(src="/img/IMG-20250726-WA0029.jpg", alt="Electrical and Mechanical Spares")
+                                img.card-img-top(src="/img/equip.jpg", alt="Equipment Rental and Leasing")
                                 .card-body
-                                    h6.card-title.mb-1.fs-6.display-5 Electrical & Mechanical Spares
-                                    p.card-text Motors, control panels, junction boxes, lighting, gaskets, seals, and drives.
-
+                                    h6.card-title.mb-1.fs-6.display-5 Equipment Leasing & Rental
+                                    p.card-text Short and long-term leasing options for generators, compressors, welding sets, rig tools, lifting equipment, excavators, swamp buggy and more.
                         .col
                             .card.border-0.shadow-sm.h-100
                                 img.card-img-top(src="/img/IMG-20250726-WA0030.jpg", alt="Lubricants and Coatings")
@@ -382,7 +385,7 @@ block content
                         p.fs-6 
                             | We support procurement for greenfield and brownfield projects, shutdowns, and maintenance campaigns — ensuring timely delivery and compliance with local and international standards.
 
-
+                .bottom2-marker
 
 
 

@@ -660,6 +660,11 @@
     url(/img/the-team.jfif) center center no-repeat;
 }
 
+.equipment__page-header {
+  background: linear-gradient(rgba(2, 6, 15, 0.9), rgba(1, 3, 8, 0.9)),
+    url(/img/equipment.jpg) center center no-repeat;
+}
+
 .page__header {
   height: 300px;
   display: flex;
@@ -759,6 +764,12 @@
   .testimonial,
   .contact-form {
     margin-left: -90px;
+  }
+
+  .sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
 }
 

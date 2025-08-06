@@ -48,6 +48,12 @@ app.get('/team', (req, res) => {
   })
 })
 
+app.get('/equipments', (req, res) => {
+  res.status(200).render('equipments', {
+    title: 'Equipments'
+  })
+})
+
 app.use((req, res) => {
   res.status(404).render('error');
 });
