@@ -9,3 +9,29 @@ block content
                 a.text-white(href="/") Home &gt;&gt;
                 h6.text-white.m-0.px-3 /
             h6.text-primary.m-0 Equipments
+
+    .container.equipment-section.pt-5.pb-3
+        .row.justify-content-center.mb-4
+            .col-lg-8
+                h1.display-5.mb-3.ps-2.py-2.fs-2(style="border-left: 6px solid #f4d73c")
+                    | Explore 
+                    span.text-primary Our
+                    |  Equipment
+                p.fs-5.text-gray We provide state-of-the-art equipment available for leasing. Reach out for customized solutions that meet your project needs.
+
+        .row.g-4
+            each item in ['Excavator 1', 'Excavator 2', 'Excavator 3', 'Swamp buggy 1', 'Swamp buggy 2', 'Self loader', 'Low bed', 'Compressor 1', 'Compressor 2', 'Welding machine 1', 'Welding machine 2', 'Welding machine 3', 'Hiace bus 1', 'Hiace bus 2']
+                .col-sm-6.col-md-4.equipment-card
+                    .card.shadow.border-0.h-100.text-center.p-3
+                        .position-relative.portfolio-box
+                            img.img-fluid.w-100(src=`/img/${item.toLowerCase().replace(/ /g, '-')}.jpg`, alt="Project image")
+                            a.portfolio-btn(href=`/img/${item.toLowerCase().replace(/ /g, '-')}.jpg`, data-lightbox="portfolio")
+                                i.bi.bi-plus.text-white
+                            h5.card-title.display-5.fs-5.my-2 #{item}
+
+        .row.my-5
+            .col-lg-12.text-center
+                h4.mb-3.display-5.fs-4.animate-from-top(style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;") Ready to Lease?
+                p.fs-5.text-gray.animate-from-left
+                    | Contact us today to discuss equipment availability and leasing options tailored to your project.
+                a.btn.btn-primary.py-2.px-3.fs-6.text-capitalize(href="/contact") Contact Us
