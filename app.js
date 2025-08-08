@@ -54,6 +54,12 @@ app.get('/equipments', (req, res) => {
   })
 })
 
+app.get('/company-profile', (req, res) => {
+  res.status(200).render('profile', {
+    title: "Profile"
+  })
+})
+
 app.use((req, res) => {
   res.status(404).render('error');
 });

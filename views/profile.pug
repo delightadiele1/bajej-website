@@ -1,0 +1,69 @@
+extends base
+
+block content
+    .container-fluid.page__header.company__page-header
+        h1.display-5.text-primary.mb-3.about-text Company Profile
+            i.fa.fa-building.fa-2x.text-primary.ms-2
+        .d-inline-flex.text-primary.fade-out
+            h6.m-0
+                a.text-white(href="/") Home &gt;&gt;
+                h6.text-white.m-0.px-3 /
+            h6.text-primary.m-0 Company
+
+    .container.pt-5.pb-3
+        .row.justify-content-center
+            .col-md-4.text-center
+                img.img-fluid.rounded.shadow-sm.mb-4.w-100.h-75(src="/img/company-ebook-cover.jpg", alt="Company Profile E-book")
+                a.btn.btn-outline-secondary.btn-lg.fs-5(href="/files/Bajejprofile.pdf") 
+                    i.fas.fa-file-pdf  
+                    |  Company Profile E-book
+
+            .col-md-8
+                h1.display-5.mb-3.ps-2.py-2.fs-2.text-center
+                    | Company 
+                    span.text-primary Policy
+                each policy in ['We uphold strict environmental and safety standards to ensure all our operations align with national and global regulations.', 'We are committed to transparent and ethical practices in all client interactions, procurement processes, and business partnerships.', 'Our workforce development policy ensures ongoing training, fair treatment, and a safe, inclusive workplace for all employees.']
+                    .mb-4.p-4.border.rounded.shadow-sm.bg-light
+                        i.fa.fa-gavel.text-primary.me-2
+                        span.text-gray #{policy}
+
+    .mission-background.py-4.animate-from-down
+        .container.mt-4
+            .row
+                .col-lg-12
+                    h1.display-5.mb-2.ps-2.py-2.fs-2.text-center.animate-from-left
+                        | Our 
+                        span.text-primary Core 
+                        | Values
+                    .row.text-center.my-3
+                        each value in ['Integrity', 'Excellence', 'Sustainability', 'Safety', 'Collaboration', 'Accountability']
+                            .col-6.col-md-4.col-lg-2.mb-4.mx-auto
+                                .p-3.border.rounded.bg-light.shadow-sm
+                                    i.fa.fa-check-circle.fa-2x.text-primary.mb-2
+                                    h6.mb-0 #{value}
+    .container.py-5
+        .row.justify-content-center
+            .col-lg-10
+                h1.display-5.mb-2.ps-2.py-2.fs-2.text-center
+                    | Who 
+                    span.text-primary We 
+                    | Are
+                p.text-gray.lead.text-center
+                    | Our company is a trusted leader in the oil and gas industry, specializing in equipment leasing, pipeline construction, and engineering services. With a strong presence across Nigeria, we deliver value, safety, and innovation to every project we undertake.
+
+        .row.mt-5
+            .col-lg-6.text-center
+                img.rounded.shadow-sm.w-75.h-75.border.border-secondary.border-5(src="/img/home.jpg", alt="Company Overview")
+            .col-md-6.mt-4.mt-lg-0
+                h3.text-primary.fs-4 Our Vision
+                p.text-gray
+                    | Our Vision is to be a leading Oil and Gas Services Provider with Excellent Reference in the Energy Sector.
+                h3.text-primary.mt-4.fs-4 Our Mission
+                p.text-gray
+                    | Our Mission is to engineer, procure, construct, install and commission quality and cost efficient oil and gas infrastructure in a safe environment.
+                .animate-from-down
+                    h4.text-gray.mb-3.mt-5 Want to Partner With Us?
+                    p.text-muted For inquiries, proposals or partnership discussions, feel free to reach out to our team.
+                    a.btn.btn-primary.btn-sm.text-capitalize.fade-in(href="/contact") Contact Us
+
+    
