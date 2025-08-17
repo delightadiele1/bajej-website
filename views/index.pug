@@ -21,6 +21,29 @@ block content
               i.fa.fa-tools.fa-3x.text-primary.mb-4
               h1.display-2.text-uppercase.text-white.mb-md-4.slide-text We Are Trusted For Your Project
               a.btn.btn-primary.py-md-3.px-md-5.mt-2.slide-btn(href="/contact") Contact Us
+        .carousel-item
+          img(class="w-100 img__slider", src="/img/IMG-20250726-WA0000.jpg", alt="Services")
+          .carousel-caption.d-flex.flex-column.align-items-center.justify-content-center
+            .p-3(style="max-width: 900px;")
+              i.fa.fa-cogs.fa-3x.text-primary.mb-4
+              h1.display-2.text-uppercase.text-white.mb-md-4.slide-text Driving Excellence Through Innovative Services
+              a.btn.btn-primary.py-md-3.px-md-5.mt-2.slide-btn(href="/services") View Services
+        .carousel-item
+          img(class="w-100 img__slider", src="/img/IMG-20250726-WA0007.jpg", alt="Projects")
+          .carousel-caption.d-flex.flex-column.align-items-center.justify-content-center
+            .p-3(style="max-width: 900px;")
+              i.fa.fa-hard-hat.fa-3x.text-primary.mb-4
+              h1.display-2.text-uppercase.text-white.mb-md-4.slide-text Discover Our Latest Projects
+              a.btn.btn-primary.py-md-3.px-md-5.mt-2.slide-btn(href="/projects") Our Projects
+        .carousel-item
+          img(class="w-100 img__slider", src="/img/company-ebook-cover.jpg", alt="Image")
+          .carousel-caption.d-flex.flex-column.align-items-center.justify-content-center
+            .p-3(style="max-width: 900px;")
+              i.fa.fa-building.fa-3x.text-primary.mb-4
+              h1.display-2.text-uppercase.text-white.mb-md-4.slide-text Discover who we are and the 
+                br
+                | values driving our success.
+              a.btn.btn-primary.py-md-3.px-md-5.mt-2.slide-btn(href="/company-profile") Company Profile
       button.carousel-control-prev(type="button", data-bs-target="#header-carousel", data-bs-slide="prev")
         span.carousel-control-prev-icon(aria-hidden="true")
         span.visually-hidden Previous
@@ -64,7 +87,15 @@ block content
         img(src="/img/signature.jpg", alt="signature")
       .col-lg-5.offset-lg-1.pb-5(style="min-height: 400px;")
         .position-relative.bg-dark-radial.h-100.ms-5
-          img.position-absolute.w-100.h-100.mt-5.ms-n5(src="/img/home2.jpg", style="object-fit: cover;")
+          #imageCarousel.carousel.slide(data-bs-ride="carousel")
+            .carousel-inner
+              .carousel-item.active.ms-n5
+                img.w-100.h-100.mt-5(src="/img/home2.jpg", style="object-fit: cover;")
+              .carousel-item.ms-n5
+                img.w-100.h-100.mt-5(src="/img/IMG-20250716-WA0056.jpg", style="object-fit: cover;")
+              .carousel-item.ms-n5
+                img.w-100.h-100.mt-5(src="/img/IMG-20250426-WA0050.jpg", style="object-fit: cover;")
+          //- img.w-100.h-100.mt-5.ms-n5(src="/img/home2.jpg", style="object-fit: cover;")
   // About End
   // Services Start
   .container-fluid.bg-light.py-6.px-5.service-section.page-section
@@ -186,7 +217,7 @@ block content
     .text-center.mx-auto.mb-5(style="max-width: 600px;")
       h1.display-5.text-uppercase.mb-4.portfolio-heading.animate-from-top Some Of Our 
         span.text-primary Popular 
-        | Dream Projects
+        | Projects
     .row.gx-5
       .col-12.text-center
         .d-inline-block.bg-dark-radial.text-center.pt-4.px-5.mb-5.portfolio-summary
@@ -266,7 +297,7 @@ block content
             i.bi.bi-plus.text-white
     .project-count.text-center.mt-2.mt-sm-5
       h1.display-2.text-uppercase.mb-4
-        span.counter(data-target='80') 0
+        span.counter(data-target='110') 0
         |+
       p.fs-5.text-dark.animate-from-left
         b Total Projects Completed
@@ -279,93 +310,73 @@ block content
         span.text-primary Professional &amp; Expert 
         | Workers
     .row.g-5
-      .col-xl-3.col-lg-4.col-sm-6
+      .col-lg-4.col-sm-6
         .row.g-0
-          .col-10(style="min-height: 300px;")
+          .col-12(style="min-height: 300px;")
             .position-relative.h-100
               img.position-absolute.w-100.h-100(src="/img/IMG-20250716-WA0071.jpg", style="object-fit: cover;")
-          .col-2
-            .h-100.d-flex.flex-column.align-items-center.justify-content-between.bg-light
-              a.btn(href="#")
-                i.fab.fa-twitter
-              a.btn(href="https://www.facebook.com/share/16chm9Ty5b/", target="_blank")
-                i.fab.fa-facebook-f
-              a.btn(href="#")
-                i.fab.fa-linkedin-in
-              a.btn(href="#")
-                i.fab.fa-instagram
+          //- .col-2
+          //-   .h-100.d-flex.flex-column.align-items-center.justify-content-between.bg-light
+          //-     a.btn(href="#")
+          //-       i.fab.fa-twitter
+          //-     a.btn(href="https://www.facebook.com/share/16chm9Ty5b/", target="_blank")
+          //-       i.fab.fa-facebook-f
+          //-     a.btn(href="#")
+          //-       i.fab.fa-linkedin-in
+          //-     a.btn(href="#")
+          //-       i.fab.fa-instagram
               // <a class="btn" href="#"><i class="fab fa-youtube"></i></a>
           .col-12
             .bg-light.p-4
               h4.text-uppercase.sub-title dr benson igboejesi
               span CEO &amp; Founder
-      .col-xl-3.col-lg-4.col-sm-6
+      .col-lg-4.col-sm-6
         .row.g-0
-          .col-10(style="min-height: 300px;")
+          .col-12(style="min-height: 300px;")
             .position-relative.h-100
               img.position-absolute.w-100.h-100(src="/img/IMG-20250716-WA0072.jpg", style="object-fit: cover;")
-          .col-2
-            .h-100.d-flex.flex-column.align-items-center.justify-content-between.bg-light
-              a.btn(href="#")
-                i.fab.fa-twitter
-              a.btn(href="#")
-                i.fab.fa-facebook-f
-              a.btn(href="#")
-                i.fab.fa-linkedin-in
-              a.btn(href="#")
-                i.fab.fa-instagram
+          //- .col-2
+          //-   .h-100.d-flex.flex-column.align-items-center.justify-content-between.bg-light
+          //-     a.btn(href="#")
+          //-       i.fab.fa-twitter
+          //-     a.btn(href="#")
+          //-       i.fab.fa-facebook-f
+          //-     a.btn(href="#")
+          //-       i.fab.fa-linkedin-in
+          //-     a.btn(href="#")
+          //-       i.fab.fa-instagram
               // <a class="btn" href="#"><i class="fab fa-youtube"></i></a>
           .col-12
             .bg-light.p-4
               h4.text-uppercase.sub-title igboejesi prince
               span Project Manager
-      .col-xl-3.col-lg-4.col-sm-6
+      .col-lg-4.col-sm-6
         .row.g-0
-          .col-10(style="min-height: 300px;")
+          .col-12(style="min-height: 300px;")
             .position-relative.h-100
               img.position-absolute.w-100.h-100(src="/img/IMG-20250716-WA0073.jpg", style="object-fit: cover;")
-          .col-2
-            .h-100.d-flex.flex-column.align-items-center.justify-content-between.bg-light
-              a.btn(href="#")
-                i.fab.fa-twitter
-              a.btn(href="#")
-                i.fab.fa-facebook-f
-              a.btn(href="#")
-                i.fab.fa-linkedin-in
-              a.btn(href="#")
-                i.fab.fa-instagram
+          //- .col-2
+          //-   .h-100.d-flex.flex-column.align-items-center.justify-content-between.bg-light
+          //-     a.btn(href="#")
+          //-       i.fab.fa-twitter
+          //-     a.btn(href="#")
+          //-       i.fab.fa-facebook-f
+          //-     a.btn(href="#")
+          //-       i.fab.fa-linkedin-in
+          //-     a.btn(href="#")
+          //-       i.fab.fa-instagram
               // <a class="btn" href="#"><i class="fab fa-youtube"></i></a>
           .col-12
             .bg-light.p-4
               h4.text-uppercase.sub-title ewa joseph
               span Operations/logistics
-      .col-xl-3.col-lg-4.col-sm-6
-        .row.g-0
-          .col-10(style="min-height: 300px;")
-            .position-relative.h-100
-              img.position-absolute.w-100.h-100(src="/img/team-4.jpg", style="object-fit: cover;")
-          .col-2
-            .h-100.d-flex.flex-column.align-items-center.justify-content-between.bg-light
-              a.btn(href="#")
-                i.fab.fa-twitter
-              a.btn(href="#")
-                i.fab.fa-facebook-f
-              a.btn(href="#")
-                i.fab.fa-linkedin-in
-              a.btn(href="#")
-                i.fab.fa-instagram
-              
-          .col-12
-            .bg-light.p-4
-              h4.text-uppercase.sub-title Chukwumuanya timothy
-              span Fitter/Foreman
   // Team End
   // Testimonial Start
   .container-fluid.bg-light.py-6.px-3.px-md-5.page-section
     .text-center.mx-auto.mb-5(style="max-width: 600px;")
-      h1.display-5.text-uppercase.mb-4 What Our 
-        span.text-primary Happy Cleints 
-        | Say!!!
+      h1.display-5.text-uppercase.mb-4 Some of  
+        span.text-primary Our 
+        | Clients 
     .row.gx-0.align-items-center
       .col-xl-4.col-lg-5.d-none.d-lg-block
         img.img-fluid.w-100.bajej-img(src="/img/company-ebook-cover.jpg")
@@ -377,32 +388,40 @@ block content
                 img.client-img.img-fluid.w-100.h-100.bg-light.p-lg-3.mb-4.mb-md-0(src="/img/renaissance-logo.png", alt="renaissance logo")
               .col-xl-8.col-lg-7.col-md-7
                 h4.text-uppercase.mb-0.sub-title renaissance africa energy company limited
-                p Profession
-                p.fs-5.mb-0
-                  i.fa.fa-2x.fa-quote-left.text-primary.me-2
-                  | Dolores sed duo
-                  | clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum.
+                p.fs-6.mb-0.mt-3
+                  i.fa.fa-2x.fa-map-marker-alt.text-primary.me-2 
+                  | 47 Glover Road, Ikoyi, Lagos, Nigeria.
+                
+                //- p Profession
+                //- p.fs-5.mb-0
+                //-   i.fa.fa-2x.fa-quote-left.text-primary.me-2
+                //-   | Dolores sed duo
+                //-   | clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum.
             .row.gx-4.align-items-center
               .col-xl-4.col-lg-5.col-md-5
                 img.client-img.img-fluid.w-100.h-100.bg-light.p-lg-3.mb-4.mb-md-0(src="/img/strides-logo.png", alt="stride logo")
               .col-xl-8.col-lg-7.col-md-7
                 h4.text-uppercase.mb-0.sub-title Strides Energy and maritime limited
-                p Profession
-                p.fs-5.mb-0
-                  i.fa.fa-2x.fa-quote-left.text-primary.me-2
-                  | Dolores sed duo
-                  | clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum.
+                p.fs-6.mb-0.mt-3
+                  i.fa.fa-2x.fa-map-marker-alt.text-primary.me-2 
+                  | KM 6, EAST-WEST Road,  Port Harcourt, Nigeria. 
+                 
+                //- p Profession
+                //- p.fs-5.mb-0
+                //-   i.fa.fa-2x.fa-quote-left.text-primary.me-2
+                //-   | Dolores sed duo
+                //-   | clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum.
             
             .row.gx-4.align-items-center
               .col-xl-4.col-lg-5.col-md-5
                 img.client-img.img-fluid.w-100.h-100.bg-light.p-lg-3.mb-4.mb-md-0(src="/img/houston-logo.png", alt="stride logo")
               .col-xl-8.col-lg-7.col-md-7
                 h4.text-uppercase.mb-0.sub-title houston engineering and maritime services limited
-                p Profession
-                p.fs-5.mb-0
-                  i.fa.fa-2x.fa-quote-left.text-primary.me-2
-                  | Dolores sed duo
-                  | clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. 
+                //- p Profession
+                p.fs-6.mb-0.mt-3
+                  i.fa.fa-2x.fa-map-marker-alt.text-primary.me-2
+                  | Plot 162, Chief Wonwu Avenue, Trans-Amadi Industrial Layout,
+                  | Trans-Amadi, Port Harcourt, Nigeria. 
   // Testimonial End
   // Blog Start
   //
