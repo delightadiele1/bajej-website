@@ -42,11 +42,11 @@ app.get('/projects', (req, res) => {
   })
 })
 
-app.get('/team', (req, res) => {
-  res.status(200).render('team', {
-    title: 'Team'
-  })
-})
+// app.get('/team', (req, res) => {
+//   res.status(200).render('team', {
+//     title: 'Team'
+//   })
+// })
 
 app.get('/equipments', (req, res) => {
   res.status(200).render('equipments', {

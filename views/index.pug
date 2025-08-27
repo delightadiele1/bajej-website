@@ -86,16 +86,40 @@ block content
           p.mb-4 We are committed to delivering projects that meet and exceed client expectations, fostering trust, ensuring safety, and contributing positively to the communities where we operate. 
         img(src="/img/signature.jpg", alt="signature")
       .col-lg-5.offset-lg-1.pb-5(style="min-height: 400px;")
-        .position-relative.bg-dark-radial.h-100.ms-5
-          #imageCarousel.carousel.slide(data-bs-ride="carousel")
-            .carousel-inner
-              .carousel-item.active.ms-n5
-                img.w-100.h-100.mt-5(src="/img/home2.jpg", style="object-fit: cover;")
-              .carousel-item.ms-n5
-                img.w-100.h-100.mt-5(src="/img/IMG-20250716-WA0056.jpg", style="object-fit: cover;")
-              .carousel-item.ms-n5
-                img.w-100.h-100.mt-5(src="/img/IMG-20250426-WA0050.jpg", style="object-fit: cover;")
-          //- img.w-100.h-100.mt-5.ms-n5(src="/img/home2.jpg", style="object-fit: cover;")
+        //- img.w-100.h-100.mt-5.ms-n5(src="/img/random1.jpg", style="object-fit: cover;")
+        #imageCarousel.carousel.slide.w-100.h-100(data-bs-ride="carousel")
+          .carousel-indicators
+            button(type="button", data-bs-target="#imageCarousel", data-bs-slide-to="0", class="active", aria-current="true", aria-label="Slide 1")
+            button(type="button", data-bs-target="#imageCarousel", data-bs-slide-to="1", aria-label="Slide 2")
+            button(type="button", data-bs-target="#imageCarousel", data-bs-slide-to="2", aria-label="Slide 3")
+            button(type="button", data-bs-target="#imageCarousel", data-bs-slide-to="3", aria-label="Slide 4")
+            button(type="button", data-bs-target="#imageCarousel", data-bs-slide-to="4", aria-label="Slide 5")
+            button(type="button", data-bs-target="#imageCarousel", data-bs-slide-to="5", aria-label="Slide 6")
+            button(type="button", data-bs-target="#imageCarousel", data-bs-slide-to="6", aria-label="Slide 7")
+          .carousel-inner.w-100.h-100
+            .carousel-item.active.w-100.h-100
+              img.w-100.h-100.mt-5(src="/img/random1.jpg" style="object-fit: cover;")
+            .carousel-item.w-100.h-100
+              img.w-100.h-100.mt-5(src="/img/random2.jpg" style="object-fit: cover;")
+            .carousel-item.w-100.h-100
+              img.w-100.h-100.mt-5(src="/img/random3.jpg" style="object-fit: cover;")
+            .carousel-item.w-100.h-100
+              img.w-100.h-100.mt-5(src="/img/random4.jpg", style="object-fit: cover;")
+            .carousel-item.w-100.h-100
+              img.w-100.h-100.mt-5(src="/img/random5.jpg", style="object-fit: cover;")
+            .carousel-item.w-100.h-100
+              img.w-100.h-100.mt-5(src="/img/random6.jpg", style="object-fit: cover;")
+            .carousel-item.w-100.h-100
+              img.w-100.h-100.mt-5(src="/img/random7.jpg", style="object-fit: cover;")
+          button.carousel-control-prev(type="button", data-bs-target="#imageCarousel", data-bs-slide="prev")
+            span.carousel-control-prev-icon(aria-hidden="true")
+            span.visually-hidden Previous
+          button.carousel-control-next(type="button", data-bs-target="#imageCarousel", data-bs-slide="next")
+            span.carousel-control-next-icon(aria-hidden="true")
+            span.visually-hidden Next
+            
+       
+          
   // About End
   // Services Start
   .container-fluid.bg-light.py-6.px-5.service-section.page-section
