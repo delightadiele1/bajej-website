@@ -6394,33 +6394,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-// GSAP Animation for Navbar Brand
-(0, $fa00f704bb212b71$export$99ee26438460406a).to(".navbar-brand", {
-    x: 0,
-    opacity: 1,
-    duration: 1,
-    ease: "bounce.out",
-    delay: 0.5
-});
-// GSAP Animation for navbar-nav
-(0, $fa00f704bb212b71$export$99ee26438460406a).to(".navbar-nav", {
-    x: 0,
-    opacity: 1,
-    duration: 1,
-    ease: "power2.out",
-    delay: 1.5
-});
-(0, $fa00f704bb212b71$export$99ee26438460406a).to(".fade-out", {
-    opacity: 1,
-    duration: 1,
-    ease: "power2.out",
-    delay: 1
-});
-(0, $fa00f704bb212b71$export$99ee26438460406a).to(".about-text", {
-    opacity: 1,
-    duration: 1,
-    y: 0,
-    ease: "power2.out"
+// GSAP Animation
+document.addEventListener('DOMContentLoaded', function() {
+    // GSAP Animation for Navbar Brand
+    (0, $fa00f704bb212b71$export$99ee26438460406a).to(".navbar-brand", {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "bounce.out",
+        delay: 0.5
+    });
+    // GSAP Animation for navbar-nav
+    (0, $fa00f704bb212b71$export$99ee26438460406a).to(".navbar-nav", {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        delay: 1.5
+    });
+    (0, $fa00f704bb212b71$export$99ee26438460406a).to(".fade-out", {
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        delay: 1
+    });
+    (0, $fa00f704bb212b71$export$99ee26438460406a).to(".about-text", {
+        opacity: 1,
+        duration: 1,
+        y: 0,
+        ease: "power2.out"
+    });
 });
 // GSAP Animation for header carousel
 document.addEventListener("DOMContentLoaded", function() {
@@ -6469,7 +6472,7 @@ function $fefc419833cc4da9$var$animateSlideContent(slide) {
         scrollTrigger: {
             trigger: sec,
             start: "top 80%",
-            toggleActions: "play none none reset"
+            toggleActions: "play none none none"
         },
         opacity: 1,
         y: 0,
@@ -6482,7 +6485,7 @@ function $fefc419833cc4da9$var$animateSlideContent(slide) {
         scrollTrigger: {
             trigger: item,
             start: "top 80%",
-            toggleActions: "play none none reset"
+            toggleActions: "play none none none"
         },
         opacity: 1,
         duration: 1,
@@ -6496,7 +6499,7 @@ function $fefc419833cc4da9$var$animateSlideContent(slide) {
         scrollTrigger: {
             trigger: item,
             start: "top 80%",
-            toggleActions: "play none none reset"
+            toggleActions: "play none none none"
         },
         opacity: 1,
         duration: 1,
@@ -6509,7 +6512,7 @@ function $fefc419833cc4da9$var$animateSlideContent(slide) {
         scrollTrigger: {
             trigger: item,
             start: "top 80%",
-            toggleActions: "play none none reset"
+            toggleActions: "play none none none"
         },
         opacity: 1,
         duration: 1,
@@ -6530,7 +6533,7 @@ $fefc419833cc4da9$var$counters.forEach((counter)=>{
         scrollTrigger: {
             trigger: counter,
             start: "top 80%",
-            toggleActions: "play none none reset"
+            toggleActions: "play none none none"
         },
         onUpdate: ()=>{
             counter.innerText = Math.floor(obj.val);
@@ -6546,7 +6549,7 @@ $fefc419833cc4da9$var$counters.forEach((counter)=>{
         scrollTrigger: {
             trigger: item,
             start: "top 80%",
-            toggleActions: "play none none reset"
+            toggleActions: "play none none none"
         },
         opacity: 1,
         duration: 1,
@@ -6559,7 +6562,7 @@ $fefc419833cc4da9$var$counters.forEach((counter)=>{
         scrollTrigger: {
             trigger: item,
             start: "top 80%",
-            toggleActions: "play none none reset"
+            toggleActions: "play none none none"
         },
         opacity: 1,
         duration: 1,
@@ -6573,7 +6576,7 @@ $fefc419833cc4da9$var$counters.forEach((counter)=>{
         scrollTrigger: {
             trigger: item,
             start: "top 80%",
-            toggleActions: "play none none reset"
+            toggleActions: "play none none none"
         },
         opacity: 1,
         duration: 1,
@@ -6587,7 +6590,7 @@ $fefc419833cc4da9$var$counters.forEach((counter)=>{
         scrollTrigger: {
             trigger: item,
             start: "top 90%",
-            toggleActions: "play none none reset"
+            toggleActions: "play none none none"
         },
         delay: 0.5,
         opacity: 1,

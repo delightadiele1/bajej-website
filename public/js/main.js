@@ -66,6 +66,8 @@
     
 })(jQuery);
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 // Services
 const serviceLinks = document.querySelectorAll('.service-links')
@@ -204,45 +206,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
 })
 
-
-
-
 // GSAP Animation
 
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+document.addEventListener('DOMContentLoaded', function() {
+    // GSAP Animation for Navbar Brand
+    gsap.to(".navbar-brand", {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "bounce.out",
+        delay: 0.5,
+        
+    });
+    // GSAP Animation for navbar-nav
+    gsap.to(".navbar-nav", {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        delay: 1.5
+    });
 
-// GSAP Animation for Navbar Brand
- gsap.to(".navbar-brand", {
-    x: 0,
-    opacity: 1,
-    duration: 1,
-    ease: "bounce.out",
-    delay: 0.5,
-    
-  });
-// GSAP Animation for navbar-nav
-gsap.to(".navbar-nav", {
-    x: 0,
-    opacity: 1,
-    duration: 1,
-    ease: "power2.out",
-    delay: 1.5
-});
+    gsap.to(".fade-out", {
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        delay: 1
+    });
 
-gsap.to(".fade-out", {
-    opacity: 1,
-    duration: 1,
-    ease: "power2.out",
-    delay: 1
-});
+    gsap.to(".about-text", {
+        opacity: 1,
+        duration: 1,
+        y: 0,
+        ease: "power2.out",
+    });
+})
 
-gsap.to(".about-text", {
-    opacity: 1,
-    duration: 1,
-    y: 0,
-    ease: "power2.out",
-});
 
 // GSAP Animation for header carousel
 document.addEventListener("DOMContentLoaded", function () {
@@ -267,7 +266,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Animate the first slide on page load
     const firstSlide = carouselElement.querySelector('.carousel-item.active');
     if (firstSlide) animateSlideContent(firstSlide);
-  });
+});
 
   function animateSlideContent(slide) {
     const text = slide.querySelector('.slide-text');
@@ -300,7 +299,7 @@ gsap.utils.toArray('.about-section').forEach(sec => {
         scrollTrigger: {
             trigger: sec,
             start: "top 80%",
-            toggleActions: "play none none reset"
+            toggleActions: "play none none none"
         },
         opacity: 1,
         y: 0,
@@ -314,7 +313,7 @@ gsap.utils.toArray('.service-item').forEach(item => {
         scrollTrigger: {
             trigger: item,
             start: "top 80%",
-            toggleActions: "play none none reset"
+            toggleActions: "play none none none"
         },
         opacity: 1,
         duration: 1,
@@ -329,7 +328,7 @@ gsap.utils.toArray('.animate-from-top').forEach(item => {
         scrollTrigger: {
             trigger: item,
             start: "top 80%",
-            toggleActions: "play none none reset"
+            toggleActions: "play none none none"
         },
         opacity: 1,
         duration: 1,
@@ -343,7 +342,7 @@ gsap.utils.toArray('.portfolio-summary').forEach(item => {
         scrollTrigger: {
             trigger: item,
             start: "top 80%",
-            toggleActions: "play none none reset"
+            toggleActions: "play none none none"
         },
         opacity: 1,
         duration: 1,
@@ -365,7 +364,7 @@ counters.forEach(counter => {
         scrollTrigger: {
             trigger: counter,
             start: "top 80%",
-            toggleActions: "play none none reset"
+            toggleActions: "play none none none"
         },
         onUpdate: () => {
             counter.innerText = Math.floor(obj.val)
@@ -382,7 +381,7 @@ gsap.utils.toArray('.animate-from-left').forEach(item => {
         scrollTrigger: {
             trigger: item,
             start: "top 80%",
-            toggleActions: "play none none reset"
+            toggleActions: "play none none none"
         },
         opacity: 1,
         duration: 1,
@@ -396,7 +395,7 @@ gsap.utils.toArray('.animate-from-right').forEach(item => {
         scrollTrigger: {
             trigger: item,
             start: "top 80%",
-            toggleActions: "play none none reset"
+            toggleActions: "play none none none"
         },
         opacity: 1,
         duration: 1,
@@ -411,7 +410,7 @@ gsap.utils.toArray('.animate-from-down').forEach(item => {
         scrollTrigger: {
             trigger: item,
             start: "top 80%",
-            toggleActions: "play none none reset"
+            toggleActions: "play none none none"
         },
         opacity: 1,
         duration: 1,
@@ -426,7 +425,7 @@ gsap.utils.toArray('.fade-in').forEach(item => {
         scrollTrigger: {
             trigger: item,
             start: "top 90%",
-            toggleActions: "play none none reset"
+            toggleActions: "play none none none"
         },
         delay: 0.5,
         opacity: 1,
