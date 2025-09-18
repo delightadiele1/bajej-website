@@ -6273,10 +6273,10 @@ $2215997bc8312f01$var$_getGSAP() && $2215997bc8312f01$var$gsap.registerPlugin($2
         return false;
     });
     // Portfolio isotope and filter
-    var portfolioIsotope = $('.portfolio-container').isotope({
-        itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
-    });
+    // var portfolioIsotope = $('.portfolio-container').isotope({
+    //     itemSelector: '.portfolio-item',
+    //     layoutMode: 'fitRows'
+    // });
     $('#portfolio-flters li').on('click', function() {
         $("#portfolio-flters li").removeClass('active');
         $(this).addClass('active');
