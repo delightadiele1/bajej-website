@@ -6293,10 +6293,13 @@ $2215997bc8312f01$var$_getGSAP() && $2215997bc8312f01$var$gsap.registerPlugin($2
         loop: true
     });
 })(jQuery);
-// Services
-const $fefc419833cc4da9$var$serviceLinks = document.querySelectorAll('.service-links');
-const $fefc419833cc4da9$var$serviceContent = document.querySelectorAll('.service-content');
-const $fefc419833cc4da9$var$serviceSection = document.querySelector('#service-section');
+// Loader
+const $fefc419833cc4da9$var$loader = document.getElementById('loader');
+document.addEventListener('DOMContentLoaded', function() {
+    if ($fefc419833cc4da9$var$loader) $fefc419833cc4da9$var$loader.style.display = 'none';
+    const pageContent = document.getElementById('page-content');
+    if (pageContent) pageContent.classList.remove('hide-content');
+});
 document.addEventListener('DOMContentLoaded', function() {
     const formSuccess = document.getElementById('form-success');
     const formError = document.getElementById('form-error');
@@ -6328,30 +6331,36 @@ document.addEventListener('DOMContentLoaded', function() {
     if (formContact) formContact.addEventListener('submit', handleContactFormSubmit);
     if (requestForm) requestForm.addEventListener('submit', handleContactFormSubmit);
 });
-const $fefc419833cc4da9$var$clearActiveService = function() {
-    console.log("executed");
-    $fefc419833cc4da9$var$serviceLinks.forEach(function(link) {
-        link.querySelector('.service-list').classList.remove('active-service');
-    });
-};
-const $fefc419833cc4da9$var$hideService = function() {
-    console.log("executed-2");
-    $fefc419833cc4da9$var$serviceContent.forEach(function(content) {
-        console.log(content);
-        content.classList.add('hide-content');
-    });
-};
-$fefc419833cc4da9$var$serviceLinks.forEach(function(link) {
-    link.addEventListener('click', (e)=>{
-        e.preventDefault();
-        $fefc419833cc4da9$var$clearActiveService();
-        $fefc419833cc4da9$var$hideService();
-        const target1 = e.currentTarget.querySelector('.service-list');
-        target1.classList.add('active-service');
-        console.log(target1.dataset.bsInfo);
-        document.querySelector(`.${target1.dataset.bsInfo}`).classList.remove('hide-content');
-        $fefc419833cc4da9$var$serviceSection.scrollIntoView({
-            behavior: 'smooth'
+document.addEventListener('DOMContentLoaded', function() {
+    // Services
+    const serviceLinks = document.querySelectorAll('.service-links');
+    const serviceContent = document.querySelectorAll('.service-content');
+    const serviceSection = document.querySelector('#service-section');
+    const clearActiveService = function() {
+        console.log("executed");
+        serviceLinks.forEach(function(link) {
+            link.querySelector('.service-list').classList.remove('active-service');
+        });
+    };
+    const hideService = function() {
+        console.log("executed-2");
+        serviceContent.forEach(function(content) {
+            console.log(content);
+            content.classList.add('hide-content');
+        });
+    };
+    serviceLinks.forEach(function(link) {
+        link.addEventListener('click', (e)=>{
+            e.preventDefault();
+            clearActiveService();
+            hideService();
+            const target1 = e.currentTarget.querySelector('.service-list');
+            target1.classList.add('active-service');
+            console.log(target1.dataset.bsInfo);
+            document.querySelector(`.${target1.dataset.bsInfo}`).classList.remove('hide-content');
+            serviceSection.scrollIntoView({
+                behavior: 'smooth'
+            });
         });
     });
 });
@@ -6427,6 +6436,23 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 // GSAP Animation for header carousel
 document.addEventListener("DOMContentLoaded", function() {
+    // Function to animate slide content
+    function animateSlideContent(slide) {
+        const text = slide.querySelector('.slide-text');
+        const btn = slide.querySelector('.slide-btn');
+        if (text) (0, $fa00f704bb212b71$export$99ee26438460406a).to(text, {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.out"
+        });
+        if (btn) (0, $fa00f704bb212b71$export$99ee26438460406a).to(btn, {
+            opacity: 1,
+            duration: 1,
+            delay: 1,
+            ease: "fade.out"
+        });
+    }
     const carouselElement = document.querySelector('#header-carousel');
     if (!carouselElement) return;
     // Reset next slide's content BEFORE it's shown
@@ -6444,173 +6470,159 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     // Animate slide content AFTER it's visible
     carouselElement.addEventListener('slid.bs.carousel', function(e) {
-        $fefc419833cc4da9$var$animateSlideContent(e.relatedTarget);
+        animateSlideContent(e.relatedTarget);
     });
     // Animate the first slide on page load
     const firstSlide = carouselElement.querySelector('.carousel-item.active');
-    if (firstSlide) $fefc419833cc4da9$var$animateSlideContent(firstSlide);
+    if (firstSlide) animateSlideContent(firstSlide);
 });
-function $fefc419833cc4da9$var$animateSlideContent(slide) {
-    const text = slide.querySelector('.slide-text');
-    const btn = slide.querySelector('.slide-btn');
-    if (text) (0, $fa00f704bb212b71$export$99ee26438460406a).to(text, {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power2.out"
+document.addEventListener('DOMContentLoaded', function() {
+    (0, $fa00f704bb212b71$export$99ee26438460406a).registerPlugin((0, $2215997bc8312f01$export$875bcbe48555930));
+    (0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.about-section').forEach((sec)=>{
+        (0, $fa00f704bb212b71$export$99ee26438460406a).to(sec, {
+            scrollTrigger: {
+                trigger: sec,
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power1.out"
+        });
     });
-    if (btn) (0, $fa00f704bb212b71$export$99ee26438460406a).to(btn, {
-        opacity: 1,
-        duration: 1,
-        delay: 1,
-        ease: "fade.out"
+    (0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.service-item').forEach((item)=>{
+        (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 1,
+            duration: 1,
+            y: 0,
+            ease: "power1.out"
+        });
     });
-}
-(0, $fa00f704bb212b71$export$99ee26438460406a).registerPlugin((0, $2215997bc8312f01$export$875bcbe48555930));
-(0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.about-section').forEach((sec)=>{
-    (0, $fa00f704bb212b71$export$99ee26438460406a).to(sec, {
-        scrollTrigger: {
-            trigger: sec,
-            start: "top 80%",
-            toggleActions: "play none none none"
-        },
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power1.out"
+    // GSAP Animation from top
+    (0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.animate-from-top').forEach((item)=>{
+        (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 1,
+            duration: 1,
+            y: 0,
+            ease: "power1.out"
+        });
     });
-});
-(0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.service-item').forEach((item)=>{
-    (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
-        scrollTrigger: {
-            trigger: item,
-            start: "top 80%",
-            toggleActions: "play none none none"
-        },
-        opacity: 1,
-        duration: 1,
-        y: 0,
-        ease: "power1.out"
+    (0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.portfolio-summary').forEach((item)=>{
+        (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 1,
+            duration: 1,
+            x: 0,
+            ease: "bounce.out"
+        });
     });
-});
-// GSAP Animation from top
-(0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.animate-from-top').forEach((item)=>{
-    (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
-        scrollTrigger: {
-            trigger: item,
-            start: "top 80%",
-            toggleActions: "play none none none"
-        },
-        opacity: 1,
-        duration: 1,
-        y: 0,
-        ease: "power1.out"
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach((counter)=>{
+        let countTo = +counter.dataset.target;
+        let obj = {
+            val: 0
+        };
+        (0, $fa00f704bb212b71$export$99ee26438460406a).to(obj, {
+            val: countTo,
+            duration: 2,
+            ease: "power1.out",
+            scrollTrigger: {
+                trigger: counter,
+                start: "top 80%",
+                toggleActions: "play none none reset"
+            },
+            onUpdate: ()=>{
+                counter.innerText = Math.floor(obj.val);
+            },
+            onComplete: ()=>{
+                counter.innerText = target;
+            }
+        });
     });
-});
-(0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.portfolio-summary').forEach((item)=>{
-    (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
-        scrollTrigger: {
-            trigger: item,
-            start: "top 80%",
-            toggleActions: "play none none none"
-        },
-        opacity: 1,
-        duration: 1,
-        x: 0,
-        ease: "bounce.out"
+    // gsap animation for total projects completed
+    (0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.animate-from-left').forEach((item)=>{
+        (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 1,
+            duration: 1,
+            x: 0,
+            ease: "power1.out"
+        });
     });
-});
-const $fefc419833cc4da9$var$counters = document.querySelectorAll('.counter');
-$fefc419833cc4da9$var$counters.forEach((counter)=>{
-    let countTo = +counter.dataset.target;
-    let obj = {
-        val: 0
-    };
-    (0, $fa00f704bb212b71$export$99ee26438460406a).to(obj, {
-        val: countTo,
-        duration: 2,
-        ease: "power1.out",
-        scrollTrigger: {
-            trigger: counter,
-            start: "top 80%",
-            toggleActions: "play none none reset"
-        },
-        onUpdate: ()=>{
-            counter.innerText = Math.floor(obj.val);
-        },
-        onComplete: ()=>{
-            counter.innerText = target;
-        }
+    (0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.animate-from-right').forEach((item)=>{
+        (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 1,
+            duration: 1,
+            x: 0,
+            ease: "power1.out"
+        });
     });
-});
-// gsap animation for total projects completed
-(0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.animate-from-left').forEach((item)=>{
-    (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
-        scrollTrigger: {
-            trigger: item,
-            start: "top 80%",
-            toggleActions: "play none none none"
-        },
-        opacity: 1,
-        duration: 1,
-        x: 0,
-        ease: "power1.out"
+    // Animate from down
+    (0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.animate-from-down').forEach((item)=>{
+        (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 1,
+            duration: 1,
+            y: 0,
+            ease: "power1.out"
+        });
     });
-});
-(0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.animate-from-right').forEach((item)=>{
-    (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
-        scrollTrigger: {
-            trigger: item,
-            start: "top 80%",
-            toggleActions: "play none none none"
-        },
-        opacity: 1,
-        duration: 1,
-        x: 0,
-        ease: "power1.out"
+    // fade in animation
+    (0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.fade-in').forEach((item)=>{
+        (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: "top 90%",
+                toggleActions: "play none none none"
+            },
+            delay: 0.5,
+            opacity: 1,
+            duration: 1.5,
+            ease: "power1.out"
+        });
     });
-});
-// Animate from down
-(0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.animate-from-down').forEach((item)=>{
-    (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
-        scrollTrigger: {
-            trigger: item,
-            start: "top 80%",
-            toggleActions: "play none none none"
-        },
-        opacity: 1,
-        duration: 1,
-        y: 0,
-        ease: "power1.out"
-    });
-});
-// fade in animation
-(0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.fade-in').forEach((item)=>{
-    (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
-        scrollTrigger: {
-            trigger: item,
-            start: "top 90%",
-            toggleActions: "play none none none"
-        },
-        delay: 0.5,
-        opacity: 1,
-        duration: 1.5,
-        ease: "power1.out"
-    });
-});
-// SPIN ANIMATION
-(0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.spin-on-hover').forEach((item)=>{
-    (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
-        scrollTrigger: {
-            trigger: item,
-            start: "top 80%",
-            toggleActions: "play none none reset"
-        },
-        rotation: 360,
-        duration: 1,
-        ease: "power1.out",
-        repeat: -1,
-        scrub: true
+    // SPIN ANIMATION
+    (0, $fa00f704bb212b71$export$99ee26438460406a).utils.toArray('.spin-on-hover').forEach((item)=>{
+        (0, $fa00f704bb212b71$export$99ee26438460406a).to(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: "top 80%",
+                toggleActions: "play none none reset"
+            },
+            rotation: 360,
+            duration: 1,
+            ease: "power1.out",
+            repeat: -1,
+            scrub: true
+        });
     });
 });
 

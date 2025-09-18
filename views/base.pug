@@ -26,13 +26,13 @@ html(lang="en")
   
   body
     //- Loader animation
-    //- #loader
-    //-   .loader-spinner
-    //-     img.loader-logo(src="/img/logo.png", alt="Loading")
+    #loader
+      .loader-spinner
+        img.loader-logo(src="/img/logo.png", alt="Loading")
 
 
     //- page content
-    #page-content
+    #page-content.hide-content
       // Header Start
       include _header
 
