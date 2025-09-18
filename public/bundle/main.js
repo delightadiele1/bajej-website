@@ -6533,7 +6533,7 @@ $fefc419833cc4da9$var$counters.forEach((counter)=>{
         scrollTrigger: {
             trigger: counter,
             start: "top 80%",
-            toggleActions: "play none none none"
+            toggleActions: "play none none reset"
         },
         onUpdate: ()=>{
             counter.innerText = Math.floor(obj.val);
