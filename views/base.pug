@@ -3,24 +3,47 @@ html(lang="en")
   head
     block head
       meta(charset="utf-8")
-      title BAJEJ | #{title}
+      title #{seoTitle || title}
+      // 🔹 SEO Meta Tags
+      meta(name="description" content=seoDecription || "Bajej Group is an oil and gas pipeline maintenance company in Nigeria.")
+      meta(name="keywords" content="Bajej Group, oil and gas, pipeline maintenance, pipeline fabrication, onshore pipeline services, offshore facility upgrades, valve changeout, manifold upgrade, flow station maintenance, wellhead installation, energy infrastructure")
+
+      // 🔹 Robots (tell Google to index + follow links)
+      meta(name="robots" content="index, follow")
+
+      // 🔹 Open Graph (social media preview: Facebook, LinkedIn, WhatsApp)
+      meta(property="og:title" content="Bajej Group – Oil & Gas Pipeline & Facility Services")
+      meta(property="og:description" content="Comprehensive oil & gas services: pipeline laying, fabrication, leak repairs, offshore facility upgrades, valve & manifold services, flow station & wellhead maintenance, and equipment procurement.")
+      meta(property="og:url" content="https://bajejgroup.com")
+      meta(property="og:type" content="website")
+
+      // 🔹 Twitter Card
+      meta(name="twitter:card" content="summary")
+      meta(name="twitter:title" content="Bajej Group – Oil & Gas Pipeline & Facility Services")
+      meta(name="twitter:description" content="Pipeline laying, fabrication, leak repairs, offshore facility upgrades, valve & manifold services, flow station & wellhead maintenance, and equipment procurement.")
       meta(content="width=device-width, initial-scale=1.0", name="viewport")
       meta(content="Free HTML Templates", name="keywords")
       meta(content="Free HTML Templates", name="description")
+
       // Favicon
-      link(href="img/logo.png", rel="icon")
+      link(href="/img/logo-bg.png", rel="icon", type="image/png")
+
       // Google Web Fonts
       link(rel="preconnect", href="https://fonts.gstatic.com")
       link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap", rel="stylesheet")
+
       // Icon Font Stylesheet
       link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css", rel="stylesheet")
       link(href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css", rel="stylesheet")
+
       // Libraries Stylesheet
       link(href="/lib/owlcarousel/assets/owl.carousel.min.css", rel="stylesheet")
       link(href="/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css", rel="stylesheet")
       link(href="/lib/lightbox/css/lightbox.min.css", rel="stylesheet")
+
       // Customized Bootstrap Stylesheet
       link(href="/css/bootstrap.min.css", rel="stylesheet")
+
       // Template Stylesheet
       link(href="/css/style.css", rel="stylesheet")
   
@@ -45,6 +68,7 @@ html(lang="en")
       // Back to Top
       a.btn.btn-lg.btn-primary.btn-lg-square.back-to-top(href="#")
         i.bi.bi-arrow-up
+
       // JavaScript Libraries
       script(src="https://code.jquery.com/jquery-3.4.1.min.js")
       script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js")
@@ -58,5 +82,6 @@ html(lang="en")
       script(src="lib/lightbox/js/lightbox.min.js")
       //- script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js')
       //- script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js')
+
       // Template Javascript
       script(src="/bundle/main.js")
